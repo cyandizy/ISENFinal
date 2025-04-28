@@ -20,7 +20,7 @@ Calculates lucky animal.
 
 Submodule get_generation
 Imports: birthday (Date)
-Exports: result (boolean)
+Exports: result (string)
 
 Calculates generation of a birthday.
 
