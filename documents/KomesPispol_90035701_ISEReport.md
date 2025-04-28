@@ -30,7 +30,7 @@ Exports: result (boolean)
 
 Checks if a lucky number is a master number.
 
-## Module analyzer
+## Module logic
 
 Submodule same_luck
 Imports: birthday1 (Date), birthday2 (Date)
@@ -38,6 +38,12 @@ Exports: result (boolean)
 
 Checks if two dates have the same lucky number and lucky animal.
 
+## Module data_structures
+
+Class Date
+day: integer
+month: integer
+year: integer
 
 # Modularity
 
