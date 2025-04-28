@@ -49,6 +49,17 @@ year: integer
 
 # Black-box test cases
 
+#### Submodule is_master_number
+| No. | Category<br>lucky_number | Input<br>lucky_number | Expected Output<br>result |
+| --- | ------------------------ | --------------------- | ------------------------- |
+| 1   | == 11                    | = 11                  | True                      |
+| 2   | == 22                    | = 22                  | True                      |
+| 3   | == 33                    | = 33                  | True                      |
+| 4   | != 11                    | = 20                  | False                     |
+| 5   | != 22                    | = 14                  | False                     |
+| 6   | != 33                    | = 43                  | False                     |
+
+
 # White-box test cases
 
 # Test implementation and test execution
