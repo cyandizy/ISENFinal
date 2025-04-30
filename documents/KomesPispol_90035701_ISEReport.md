@@ -24,8 +24,8 @@ Calculates lucky animal.
 
 ```
 Submodule get_generation
-Imports: birthday (Date)
-Exports: result (string)
+Imports: year (integer)
+Exports: generation (string)
 
 Calculates generation of a birthday.
 ```
