@@ -60,7 +60,7 @@ year: integer
 # Modularity
 
 # Black-box test cases
-
+### Module calculator
 #### Submodule calculate_lucky_number
 | No. | Category                                                                              | Input<br>Date | Expected Output<br>lucky_number |
 | --- | ------------------------------------------------------------------------------------- | ------------- | ------------------------------- |
@@ -110,6 +110,12 @@ year: integer
 | 5   | != 22                    | = 14                  | False                     |
 | 6   | != 33                    | = 43                  | False                     |
 
+### Module logic
+#### Submodule same_luck
+| No. | Category<br>                                                                 | Input<br>birthday1,<br>birthday2     | Expected Output<br>result |
+| --- | ---------------------------------------------------------------------------- | ------------------------------------ | ------------------------- |
+| 1   | Lucky number of birthday1 <br>is equal to <br>lucky number of birthday 2     | = (09, 07, 2005)<br>= (08, 08, 2005) | True                      |
+| 2   | Lucky number of birthday1 <br>is NOT equal to <br>lucky number of birthday 2 | = (09, 07, 2005)<br>= (08, 09, 2005) | False                     |
 
 # White-box test cases
 
