@@ -1,9 +1,10 @@
 # Cover page
-
+`Include the assessment name, your name as in Moodle, Curtin student ID, practical class (date/
+time). This may not be in a separate page, but as the first thing in your document in a clear
+format.`
 # Introduction
-
+`A brief overview of work you have done.`
 # Module descriptions
-
 ## Module calculator
 
 ```
@@ -58,7 +59,14 @@ year: integer
 ```
 
 # Modularity
-
+`A description on how to run your production code with correct commands.
+Sample output of running your production code. You must use screen shots to support your answer
+in this section.
+A brief explanation on how different modularity concepts is applied in your code.
+Your review checklist, results of reviewing your production code using the review checklist,
+with explanation on your results, and refactoring decisions.
+Revised module descriptions resulted after refactoring, if any (after doing the part 3 of the
+detailed description)`
 # Black-box test cases
 ### Module calculator
 #### Submodule calculate_lucky_number
@@ -118,11 +126,18 @@ year: integer
 | 2   | Lucky number of birthday1 <br>is NOT equal to <br>lucky number of birthday 2 | = (09, 07, 2005)<br>= (08, 09, 2005) | False                     |
 
 # White-box test cases
-
+`All test cases you have designed as the answer for part 5 of this assessment, produced in the
+tubular format shown in lecture 10, brief explanation on your test design, and any
+assumptions you made.`
 # Test implementation and test execution
-
+`A brief description of how to run your test code with correct commands.
+Results of test execution with outputs of test successes and failures, with short discussion
+of results/improvements from part 5 of this assessment.`
 # Summary
-
+`Table you have produced in the part 6 of this assessment.`
 # Version control
-
+`Log of the use of your version control system (image of the log is sufficient), any explanation/discussion on version control. (refer part 1 of the detailed description)`
 # Discussion
+`Reflect on your own work including summary of what you have achieved, challenges you have
+faced, limitations and ways to improve your work with other features you have not considered, and
+any other information you wish to present.`
