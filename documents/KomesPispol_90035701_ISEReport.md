@@ -31,14 +31,6 @@ Exports: generation (string)
 Calculates generation of a birthday.
 ```
 
-```
-Submodule is_master_number
-Imports: lucky_number (integer)
-Exports: result (boolean)
-
-Checks if a lucky number is a master number.
-```
-
 ## Module logic
 
 ```
@@ -47,6 +39,14 @@ Imports: birthday1 (Date), birthday2 (Date)
 Exports: result (boolean)
 
 Checks if two dates have the same lucky number and lucky animal.
+```
+
+```
+Submodule is_master_number
+Imports: lucky_number (integer)
+Exports: result (boolean)
+
+Checks if a lucky number is a master number.
 ```
 
 ## Module data_structures
@@ -107,7 +107,12 @@ detailed description)`
 | 4   | 1980 <= year <= 1994 | = 1990        | "Millennials"                 |
 | 5   | 1995 <= year <= 2009 | = 2000        | "Generation Z"                |
 | 6   | 2010 <= year <= 2024 | = 2020        | "Generation Alpha"            |
-
+### Module logic
+#### Submodule same_luck
+| No. | Category<br>                                                                 | Input<br>birthday1,<br>birthday2     | Expected Output<br>result |
+| --- | ---------------------------------------------------------------------------- | ------------------------------------ | ------------------------- |
+| 1   | Lucky number of birthday1 <br>is equal to <br>lucky number of birthday 2     | = (09, 07, 2005)<br>= (08, 08, 2005) | True                      |
+| 2   | Lucky number of birthday1 <br>is NOT equal to <br>lucky number of birthday 2 | = (09, 07, 2005)<br>= (08, 09, 2005) | False                     |
 #### Submodule is_master_number
 | No. | Category<br>lucky_number | Input<br>lucky_number | Expected Output<br>result |
 | --- | ------------------------ | --------------------- | ------------------------- |
@@ -117,13 +122,6 @@ detailed description)`
 | 4   | != 11                    | = 20                  | False                     |
 | 5   | != 22                    | = 14                  | False                     |
 | 6   | != 33                    | = 43                  | False                     |
-
-### Module logic
-#### Submodule same_luck
-| No. | Category<br>                                                                 | Input<br>birthday1,<br>birthday2     | Expected Output<br>result |
-| --- | ---------------------------------------------------------------------------- | ------------------------------------ | ------------------------- |
-| 1   | Lucky number of birthday1 <br>is equal to <br>lucky number of birthday 2     | = (09, 07, 2005)<br>= (08, 08, 2005) | True                      |
-| 2   | Lucky number of birthday1 <br>is NOT equal to <br>lucky number of birthday 2 | = (09, 07, 2005)<br>= (08, 09, 2005) | False                     |
 
 # White-box test cases
 `All test cases you have designed as the answer for part 5 of this assessment, produced in the
