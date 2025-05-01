@@ -29,4 +29,4 @@ class TestLogic(unittest.TestCase):
                "Case: Lucky number != 33"]
         
         for i in range(len(expected)):
-            self.assertEqual(expected[i], logic.same_luck(lucky_number[i]), msg[i])
+            self.assertEqual(expected[i], logic.is_master_number(lucky_number[i]), msg[i])

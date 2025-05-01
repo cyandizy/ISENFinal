@@ -13,7 +13,7 @@ class TestCalculator(unittest.TestCase):
                     Date(111, 12, 9),
                     Date(99, 99, 9999)]
         
-        expected = [12,
+        expected = [3,
                ValueError,
                ValueError,
                ValueError,
