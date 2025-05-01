@@ -2,6 +2,13 @@ from data_structures import Date
 import logic
 
 def calculate_lucky_number(birthday: Date):
+    if birthday.day not in range(1, 32):
+        return ValueError("Day value must be from 1 to 31 inclusive.")
+    elif birthday.month not in range(1, 13):
+        return ValueError("Month value must be from 1 to 12 inclusive.")
+    elif birthday.year not in range(1901, 2025):
+        return ValueError("Year value must be from 1901 to 2024 inclusive")
+    
     date_string = str(birthday.day) + str(birthday.month) + str(birthday.year)
     lucky_number = 0
     for char in date_string:
