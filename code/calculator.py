@@ -15,7 +15,25 @@ def calculate_lucky_number(birthday: Date):
     return lucky_number
 
 def get_lucky_animal(lucky_number):
-    ...
+    lucky_animal_dict = {
+        1: "Parrot",
+        2: "Rabbit",
+        3: "Elephant",
+        4: "Beetles",
+        5: "Bears",
+        6: "Deer",
+        7: "Crane",
+        8: "Horse",
+        9: "Fish",
+        11: "Dolphin",
+        22: "Lion",
+        33: "Turtle"
+    }
+    if lucky_number in lucky_animal_dict.keys():
+       return lucky_animal_dict[lucky_number]
+    else:
+        return "" 
+
 
 def get_generation(year):
     ...
