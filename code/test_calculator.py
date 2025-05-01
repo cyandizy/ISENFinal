@@ -66,3 +66,22 @@ class TestCalculator(unittest.TestCase):
         
         for i in range(len(expected)):
             self.assertEqual(expected[i], calculator.get_lucky_animal(lucky_number[i]), msg[i])
+    
+    def test_get_generation(self):
+        year = [1930, 1950, 1970, 1990, 2000, 2020]
+        expected = ["Silent Generation",
+                    "Baby Boomers",
+                    "Generation X",
+                    "Millennials",
+                    "Generation Z",
+                    "Generation Alpha"]
+        
+        msg = ["1901 <= year <= 1945",
+               "1946 <= year <= 1964",
+               "1965 <= year <= 1979",
+               "1980 <= year <= 1994",
+               "1995 <= year <= 2009",
+               "2010 <= year <= 2024"]
+        
+        for i in range(len(expected)):
+            self.assertEqual(expected[i], calculator.get_generation(year[i]), msg[i])
