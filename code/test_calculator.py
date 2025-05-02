@@ -4,33 +4,14 @@ import unittest
 
 class TestCalculator(unittest.TestCase):
     def test_calculate_lucky_number(self):
-        birthday = [(10, 3, 2006),
-                    (0, 2, 2001),
-                    (10, 0, 1999),
-                    (20, 4, 9999),
-                    (-1, 0, 2004),
-                    (4, 99, 2193),
-                    (111, 12, 9),
-                    (99, 99, 9999)]
+        birthday = [Date(10, 3, 2006), Date(6, 6, 2017)]
         
-        expected = [3,
-               ValueError,
-               ValueError,
-               ValueError,
-               ValueError,
-               ValueError,
-               ValueError,
-               ValueError]
+        expected = [3, 22]
         
-        msg = ["Case: Intended",
-               "Case: Invalid day",
-               "Case: Invalid month",
-               "Case: Invalid year",
-               "Case: Invalid day and month",
-               "Case: Invalid month and year",
-               "Case: Invalid day and year",
-               "Case: Invalid day, month, and year"]
-        
+        msg = [
+            "Case: Not master number",
+            "Case: Master number"]
+    
         for i in range(len(expected)):
             if expected[i] == Exception:
                 self.assertRaises(expected[i], calculator.calculate_lucky_number(birthday[i]), msg[i])
@@ -39,19 +20,20 @@ class TestCalculator(unittest.TestCase):
 
     def test_get_lucky_animal(self):
         lucky_number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33, 0]
-        expected = ["Parrot",
-                    "Rabbit",
-                    "Elephant",
-                    "Beetles",
-                    "Bears",
-                    "Deer",
-                    "Crane",
-                    "Horse",
-                    "Fish",
-                    "Dolphin",
-                    "Lion",
-                    "Turtle", 
-                    ""]
+        expected = [
+            "Parrot",
+            "Rabbit",
+            "Elephant",
+            "Beetles",
+            "Bears",
+            "Deer",
+            "Crane",
+            "Horse",
+            "Fish",
+            "Dolphin",
+            "Lion",
+            "Turtle", 
+            ""]
         
         msg = ["Case: Lucky number == 1",
                "Case: Lucky number == 2",
