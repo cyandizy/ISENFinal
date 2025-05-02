@@ -11,7 +11,7 @@ class Date:
         elif self.year not in range(1901, 2025):
             return ValueError("Year value must be from 1901 to 2024 inclusive")
         
-        if self.month.isinstance(str):
+        if isinstance(self.month, str):
             self.month = self.format_month(self.month)
 
     def format_month(self):
