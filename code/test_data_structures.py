@@ -26,15 +26,15 @@ class TestDate(unittest.TestCase):
                 ValueError]
         
         msg = [
-            "Day = 1-31, Month = 1-12, Year = 1901-2024 (all inclusive)",
-            "String month",
-            "Invalid day",
-            "Invalid month",
-            "Invalid year",
-            "Invalid day and month",
-            "Invalid month and year",
-            "Invalid day and year",
-            "Invalid day, month, and year"
+            "Case: Day = 1-31, Month = 1-12, Year = 1901-2024 (all inclusive)",
+            "Case: String month",
+            "Case: Invalid day",
+            "Case: Invalid month",
+            "Case: Invalid year",
+            "Case: Invalid day and month",
+            "Case: Invalid month and year",
+            "Case: Invalid day and year",
+            "Case: Invalid day, month, and year"
         ]
 
         for i in range(len(expected)):
@@ -48,22 +48,50 @@ class TestDate(unittest.TestCase):
             "January", "February", "March", "April", "May", "June",
             "July", "August", "September", "October", "November", "December",
             "Jan", "Feb", "Mar", "Apr", "Jun", "Jul",
-            "Aug", "Sep", "Sept", "Oct", "Nov", "Dec"
+            "Aug", "Sep", "Sept", "Oct", "Nov", "Dec",
+            "jan", "JAN", "Jupiter"
         ]
 
         expected = [
             1, 2, 3, 4, 5, 6,
             7, 8, 9, 10, 11, 12,
             1, 2, 3, 4, 6, 7,
-            8, 9, 9, 10, 11, 12
+            8, 9, 9, 10, 11, 12,
+            1, 1, ValueError
         ]
 
         msg = [
-            "January", "February", "March", "April", "May", "June",
-            "July", "August", "September", "October", "November", "December",
-            "Jan", "Feb", "Mar", "Apr", "Jun", "Jul",
-            "Aug", "Sep", "Sept", "Oct", "Nov", "Dec"
+            "Case: January", 
+            "Case: February", 
+            "Case: March", 
+            "Case: April", 
+            "Case: May", 
+            "Case: June",
+            "Case: July", 
+            "Case: August", 
+            "Case: September", 
+            "Case: October", 
+            "Case: November", 
+            "Case: December",
+            "Case: Jan", 
+            "Case: Feb", 
+            "Case: Mar", 
+            "Case: Apr", 
+            "Case: Jun", 
+            "Case: Jul",
+            "Case: Aug", 
+            "Case: Sep", 
+            "Case: Sept", 
+            "Case: Oct", 
+            "Case: Nov", 
+            "Case: Dec", 
+            "Case: All lowercase",
+            "Case: All upper case", 
+            "Case: String does not match any month"
         ]
 
         for i in range(len(expected)):
-            self.assertEqual(expected[i], data_structures.Date.format_month(month[i]), msg[i])
+            if expected[i] == ValueError:
+                self.assertRaises(expected[i], data_structures.Date.format_month(month[i]), msg[i])
+            else:
+                self.assertEqual(expected[i], data_structures.Date.format_month(month[i]), msg[i])
