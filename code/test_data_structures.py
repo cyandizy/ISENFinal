@@ -1,4 +1,4 @@
-import data_structures
+from data_structures import *
 import unittest
 
 class TestDate(unittest.TestCase):
@@ -15,8 +15,8 @@ class TestDate(unittest.TestCase):
             (99, 99, 9999)]
         
         expected = [
-                None,
-                None,
+                (10, 3, 2006),
+                (10, 3, 2006),
                 ValueError,
                 ValueError,
                 ValueError,
@@ -40,12 +40,15 @@ class TestDate(unittest.TestCase):
         for i in range(len(expected)):
             if expected[i] == ValueError:
                 with self.assertRaises(ValueError, msg=msg[i]):
-                    data_structures.Date(*dates[i])
+                    Date(*dates[i])
             else:
-                self.assertEqual(expected[i], data_structures.Date(*dates[i]), msg[i])
+                test_date = Date(*dates[i])
+                self.assertEqual(expected[i][0], test_date.day, msg[i])
+                self.assertEqual(expected[i][1], test_date.month, msg[i])
+                self.assertEqual(expected[i][2], test_date.year, msg[i])
 
     def test_format_month(self):
-        test_date = data_structures.Date(1, 4, 2012)
+        test_date = Date(1, 4, 2012)
         month = [
             "January", "February", "March", "April", "May", "June",
             "July", "August", "September", "October", "November", "December",
