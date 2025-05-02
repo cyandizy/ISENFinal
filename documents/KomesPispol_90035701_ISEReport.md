@@ -9,7 +9,7 @@ format.`
 
 ```
 Submodule calculate_lucky_number
-Imports: day (integer), month (integer), year (integer)
+Imports: (day (integer), month (integer or string), year (integer)) (tuble)
 Exports: lucky_number (integer)
 
 Calculates lucky number.
@@ -35,7 +35,9 @@ Calculates generation of a birthday.
 
 ```
 Submodule same_luck
-Imports: birthday1 (Date), birthday2 (Date)
+Imports: 
+		(day1 (integer), month1 (integer or string), year1 (integer)) (tuble)
+		(day2 (integer), month2 (integer or string), year2 (integer)) (tuble)
 Exports: result (boolean)
 
 Checks if two dates have the same lucky number and lucky animal.
@@ -53,6 +55,7 @@ Checks if a lucky number is a master number.
 
 ```
 Class Date
+Imports: (day (integer), month (integer or string), year (integer)) (tuble)
 day: integer
 month: integer or string
 year: integer
@@ -78,17 +81,17 @@ detailed description)`
 # Black-box test cases
 ### Module calculator
 #### Submodule calculate_lucky_number
-| No. | Category                                                                              | Input<br>day, month, year | Expected Output<br>lucky_number |
-| --- | ------------------------------------------------------------------------------------- | ------------------------- | ------------------------------- |
-| 1   | Date.day = 1-31, <br>Date.month = 1-12, <br>Date.year = 1901-2024 <br>(all inclusive) | 10, 3, 2006               | 12                              |
-| 2   | String month                                                                          | 10, "March", 2006         | 12                              |
-| 3   | Invalid day                                                                           | 0, 2, 2001                | Exception                       |
-| 4   | Invalid month                                                                         | 10, 0, 1999               | Exception                       |
-| 5   | Invalid year                                                                          | 20, 4, 9999               | Exception                       |
-| 6   | Invalid day and month                                                                 | -1, 0, 2004               | Exception                       |
-| 7   | Invalid month and year                                                                | 4, 99, 2193               | Exception                       |
-| 8   | Invalid day and year                                                                  | 111, 12, 9                | Exception                       |
-| 9   | Invalid day, month, and year                                                          | 99, 99, 9999              | Exception                       |
+| No. | Category                                                               | Input<br>day, month, year | Expected Output<br>lucky_number |
+| --- | ---------------------------------------------------------------------- | ------------------------- | ------------------------------- |
+| 1   | Day = 1-31, <br>Month = 1-12, <br>Year = 1901-2024 <br>(all inclusive) | 10, 3, 2006               | 12                              |
+| 2   | String month                                                           | 10, "March", 2006         | 12                              |
+| 3   | Invalid day                                                            | 0, 2, 2001                | Exception                       |
+| 4   | Invalid month                                                          | 10, 0, 1999               | Exception                       |
+| 5   | Invalid year                                                           | 20, 4, 9999               | Exception                       |
+| 6   | Invalid day and month                                                  | -1, 0, 2004               | Exception                       |
+| 7   | Invalid month and year                                                 | 4, 99, 2193               | Exception                       |
+| 8   | Invalid day and year                                                   | 111, 12, 9                | Exception                       |
+| 9   | Invalid day, month, and year                                           | 99, 99, 9999              | Exception                       |
 
 #### Submodule get_lucky_animal
 | No. | Category<br>lucky_number<br>                      | Input<br>lucky_number | Expected Output<br>lucky_animal |
@@ -118,10 +121,10 @@ detailed description)`
 | 6   | 2010 <= year <= 2024 | = 2020        | "Generation Alpha"            |
 ### Module logic
 #### Submodule same_luck
-| No. | Category<br>                                                                 | Input<br>birthday1,<br>birthday2     | Expected Output<br>result |
-| --- | ---------------------------------------------------------------------------- | ------------------------------------ | ------------------------- |
-| 1   | Lucky number of birthday1 <br>is equal to <br>lucky number of birthday 2     | = (09, 07, 2005)<br>= (08, 08, 2005) | True                      |
-| 2   | Lucky number of birthday1 <br>is NOT equal to <br>lucky number of birthday 2 | = (09, 07, 2005)<br>= (08, 09, 2005) | False                     |
+| No. | Category<br>                                                                 | Input<br>                                                | Expected Output<br>result |
+| --- | ---------------------------------------------------------------------------- | -------------------------------------------------------- | ------------------------- |
+| 1   | Lucky number of birthday1 <br>is equal to <br>lucky number of birthday 2     | birthday1 = (09, 07, 2005)<br>birthday2 = (08, 08, 2005) | True                      |
+| 2   | Lucky number of birthday1 <br>is NOT equal to <br>lucky number of birthday 2 | birthday1 = (09, 07, 2005)<br>birthday2 = (08, 09, 2005) | False                     |
 #### Submodule is_master_number
 | No. | Category<br>lucky_number | Input<br>lucky_number | Expected Output<br>result |
 | --- | ------------------------ | --------------------- | ------------------------- |
