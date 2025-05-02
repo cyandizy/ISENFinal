@@ -76,9 +76,10 @@ detailed description)`
 # Black-box test cases
 ### Module calculator
 #### Submodule calculate_lucky_number
-| No. | Category   | Input<br>birthday | Expected Output<br>lucky_number |
-| --- | ---------- | ----------------- | ------------------------------- |
-| 1   | Valid Date | Date(10, 3, 2006) | 12                              |
+| No. | Category          | Input<br>birthday | Expected Output<br>lucky_number |
+| --- | ----------------- | ----------------- | ------------------------------- |
+| 1   | Not master number | Date(10, 3, 2006) | 3                               |
+| 2   | Master number     | Date(6, 6, 2017)  | 22                              |
 
 
 #### Submodule get_lucky_animal
