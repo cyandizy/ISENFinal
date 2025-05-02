@@ -1,18 +1,19 @@
 class Date:
     def __init__(self, day, month, year):
         self.day = day
-        self.month = month
         self.year = year
-        
+
+        if isinstance(month, str):
+            self.month = self.format_month(month)
+        else:
+            self.month = month
+
         if self.day not in range(1, 32):
             raise ValueError("Day value must be from 1 to 31 inclusive.")
         elif self.month not in range(1, 13):
             raise ValueError("Month value must be from 1 to 12 inclusive.")
         elif self.year not in range(1901, 2025):
             raise ValueError("Year value must be from 1901 to 2024 inclusive")
-        
-        if isinstance(self.month, str):
-            self.month = self.format_month(self.month)
 
     def format_month(self, month: str):
         month = month.lower()
