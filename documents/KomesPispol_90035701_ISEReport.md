@@ -141,32 +141,35 @@ detailed description)`
 | 9   | Invalid day, month, and year                                           | day = 99<br>month = 99<br>year = 9999      | ValueError                |
 
 #### Method format_month
-| No. | Category<br> | Input<br>month | Expected Output<br>month |
-| --- | ------------ | -------------- | ------------------------ |
-| 1   | January      | = "January"    | 1                        |
-| 2   | Febuary      | = "Febuary"    | 2                        |
-| 3   | March        | = "March"      | 3                        |
-| 4   | April        | = "April"      | 4                        |
-| 5   | May          | = "May"        | 5                        |
-| 6   | June         | = "June"       | 6                        |
-| 7   | July         | = "July"       | 7                        |
-| 8   | August       | = "August"     | 8                        |
-| 9   | September    | = "September"  | 9                        |
-| 10  | October      | = "October"    | 10                       |
-| 11  | November     | = "November"   | 11                       |
-| 12  | December     | = "December"   | 12                       |
-| 13  | Jan          | = "Jan"        | 1                        |
-| 14  | Feb          | = "Feb"        | 2                        |
-| 15  | Mar          | = "Mar"        | 3                        |
-| 16  | Apr          | = "Apr"        | 4                        |
-| 17  | Jun          | = "Jun"        | 6                        |
-| 18  | Jul          | = "Jul"        | 7                        |
-| 19  | Aug          | = "Aug"        | 8                        |
-| 20  | Sep          | = "Sep"        | 9                        |
-| 21  | Sept         | = "Sept"       | 9                        |
-| 22  | Oct          | = "Oct"        | 10                       |
-| 23  | Nov          | = "Nov"        | 11                       |
-| 24  | Dec          | = "Dec"        | 12                       |
+| No. | Category<br>                    | Input<br>month | Expected Output<br>month |
+| --- | ------------------------------- | -------------- | ------------------------ |
+| 1   | January                         | = "January"    | 1                        |
+| 2   | Febuary                         | = "Febuary"    | 2                        |
+| 3   | March                           | = "March"      | 3                        |
+| 4   | April                           | = "April"      | 4                        |
+| 5   | May                             | = "May"        | 5                        |
+| 6   | June                            | = "June"       | 6                        |
+| 7   | July                            | = "July"       | 7                        |
+| 8   | August                          | = "August"     | 8                        |
+| 9   | September                       | = "September"  | 9                        |
+| 10  | October                         | = "October"    | 10                       |
+| 11  | November                        | = "November"   | 11                       |
+| 12  | December                        | = "December"   | 12                       |
+| 13  | Jan                             | = "Jan"        | 1                        |
+| 14  | Feb                             | = "Feb"        | 2                        |
+| 15  | Mar                             | = "Mar"        | 3                        |
+| 16  | Apr                             | = "Apr"        | 4                        |
+| 17  | Jun                             | = "Jun"        | 6                        |
+| 18  | Jul                             | = "Jul"        | 7                        |
+| 19  | Aug                             | = "Aug"        | 8                        |
+| 20  | Sep                             | = "Sep"        | 9                        |
+| 21  | Sept                            | = "Sept"       | 9                        |
+| 22  | Oct                             | = "Oct"        | 10                       |
+| 23  | Nov                             | = "Nov"        | 11                       |
+| 24  | Dec                             | = "Dec"        | 12                       |
+| 25  | All lowercase                   | = "jan"        | 1                        |
+| 26  | All uppercase                   | = "JAN"        | 1                        |
+| 27  | String does not match any month | = "Jupiter"    | ValueError               |
 
 # White-box test cases
 `All test cases you have designed as the answer for part 5 of this assessment, produced in the
