@@ -39,7 +39,8 @@ class TestDate(unittest.TestCase):
 
         for i in range(len(expected)):
             if expected[i] == ValueError:
-                self.assertRaises(expected[i], data_structures.Date(*dates[i]), msg[i])
+                with self.assertRaises(ValueError, msg=msg[i]):
+                    data_structures.Date(*dates[i])
             else:
                 self.assertEqual(expected[i], data_structures.Date(*dates[i]), msg[i])
 
@@ -93,6 +94,8 @@ class TestDate(unittest.TestCase):
 
         for i in range(len(expected)):
             if expected[i] == ValueError:
-                self.assertRaises(expected[i], test_date.format_month(month[i]), msg[i])
+                with self.assertRaises(ValueError, msg=msg[i]):
+                    test_date.format_month(month[i])
+
             else:
                 self.assertEqual(expected[i], test_date.format_month(month[i]), msg[i])
