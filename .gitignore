@@ -1,2 +1,3 @@
 .obsidian/
 *.zip
+__pycache__/
