@@ -128,17 +128,17 @@ detailed description)`
 #### Class Date
 #### Constructor
 
-| No. | Category<br>lucky_number                                               | Input<br>lucky_number   | Expected Output<br>result |
-| --- | ---------------------------------------------------------------------- | ----------------------- | ------------------------- |
-| 1   | Day = 1-31, <br>Month = 1-12, <br>Year = 1901-2024 <br>(all inclusive) | Date(10, 3, 2006)       | None                      |
-| 2   | String month                                                           | Date(10, "March", 2006) | None                      |
-| 3   | Invalid day                                                            | Date(0, 2, 2001)        | ValueError                |
-| 4   | Invalid month                                                          | Date(10, 0, 1999)       | ValueError                |
-| 5   | Invalid year                                                           | Date(20, 4, 9999)       | ValueError                |
-| 6   | Invalid day and month                                                  | Date(-1, 0, 2004)       | ValueError                |
-| 7   | Invalid month and year                                                 | Date(4, 99, 2193)       | ValueError                |
-| 8   | Invalid day and year                                                   | Date(111, 12, 9)        | ValueError                |
-| 9   | Invalid day, month, and year                                           | Date(99, 99, 9999)      | ValueError                |
+| No. | Category<br>                                                           | Input<br>                                  | Expected Output<br>result |
+| --- | ---------------------------------------------------------------------- | ------------------------------------------ | ------------------------- |
+| 1   | Day = 1-31, <br>Month = 1-12, <br>Year = 1901-2024 <br>(all inclusive) | day = 10<br>month = 3 <br>year = 2006      | None                      |
+| 2   | String month                                                           | day = 10<br>month = "March"<br>year = 2006 | None                      |
+| 3   | Invalid day                                                            | day = 0<br>month = 2<br>year = 2001        | ValueError                |
+| 4   | Invalid month                                                          | day = 10<br>month = 0<br>year = 1999       | ValueError                |
+| 5   | Invalid year                                                           | day = 20<br>month = 4<br>year = 9999       | ValueError                |
+| 6   | Invalid day and month                                                  | day = -1<br>month = 0<br>year = 2024       | ValueError                |
+| 7   | Invalid month and year                                                 | day = 4<br>month = 99<br>year = 2193       | ValueError                |
+| 8   | Invalid day and year                                                   | day = 111<br>month = 12<br>year = 9        | ValueError                |
+| 9   | Invalid day, month, and year                                           | day = 99<br>month = 99<br>year = 9999      | ValueError                |
 
 #### Method format_month
 | No. | Category<br> | Input<br>month | Expected Output<br>month |
