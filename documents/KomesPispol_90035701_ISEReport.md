@@ -9,7 +9,7 @@ format.`
 
 ```
 Submodule calculate_lucky_number
-Imports: birthday (Date)
+Imports: day (integer), month (integer), year (integer)
 Exports: lucky_number (integer)
 
 Calculates lucky number.
@@ -54,8 +54,16 @@ Checks if a lucky number is a master number.
 ```
 Class Date
 day: integer
-month: integer
+month: integer or string
 year: integer
+
+Stores day, month, year in integer format
+
+Method format_month
+import: None
+export: None
+
+Formats month to integer
 ```
 
 # Modularity
@@ -70,16 +78,17 @@ detailed description)`
 # Black-box test cases
 ### Module calculator
 #### Submodule calculate_lucky_number
-| No. | Category                                                                              | Input<br>Date | Expected Output<br>lucky_number |
-| --- | ------------------------------------------------------------------------------------- | ------------- | ------------------------------- |
-| 1   | Date.day = 1-31, <br>Date.month = 1-12, <br>Date.year = 1901-2024 <br>(all inclusive) | 10, 3, 2006   | 12                              |
-| 2   | Invalid day                                                                           | 0, 2, 2001    | Exception                       |
-| 3   | Invalid month                                                                         | 10, 0, 1999   | Exception                       |
-| 4   | Invalid year                                                                          | 20, 4, 9999   | Exception                       |
-| 5   | Invalid day and month                                                                 | -1, 0, 2004   | Exception                       |
-| 6   | Invalid month and year                                                                | 4, 99, 2193   | Exception                       |
-| 7   | Invalid day and year                                                                  | 111, 12, 9    | Exception                       |
-| 8   | Invalid day, month, and year                                                          | 99, 99, 9999  | Exception                       |
+| No. | Category                                                                              | Input<br>day, month, year | Expected Output<br>lucky_number |
+| --- | ------------------------------------------------------------------------------------- | ------------------------- | ------------------------------- |
+| 1   | Date.day = 1-31, <br>Date.month = 1-12, <br>Date.year = 1901-2024 <br>(all inclusive) | 10, 3, 2006               | 12                              |
+| 2   | String month                                                                          | 10, "March", 2006         | 12                              |
+| 3   | Invalid day                                                                           | 0, 2, 2001                | Exception                       |
+| 4   | Invalid month                                                                         | 10, 0, 1999               | Exception                       |
+| 5   | Invalid year                                                                          | 20, 4, 9999               | Exception                       |
+| 6   | Invalid day and month                                                                 | -1, 0, 2004               | Exception                       |
+| 7   | Invalid month and year                                                                | 4, 99, 2193               | Exception                       |
+| 8   | Invalid day and year                                                                  | 111, 12, 9                | Exception                       |
+| 9   | Invalid day, month, and year                                                          | 99, 99, 9999              | Exception                       |
 
 #### Submodule get_lucky_animal
 | No. | Category<br>lucky_number<br>                      | Input<br>lucky_number | Expected Output<br>lucky_animal |
