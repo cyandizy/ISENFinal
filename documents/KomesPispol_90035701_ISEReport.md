@@ -130,8 +130,8 @@ detailed description)`
 
 | No. | Category<br>                                                           | Input<br>                                  | Expected Output<br>result |
 | --- | ---------------------------------------------------------------------- | ------------------------------------------ | ------------------------- |
-| 1   | Day = 1-31, <br>Month = 1-12, <br>Year = 1901-2024 <br>(all inclusive) | day = 10<br>month = 3 <br>year = 2006      | None                      |
-| 2   | String month                                                           | day = 10<br>month = "March"<br>year = 2006 | None                      |
+| 1   | Day = 1-31, <br>Month = 1-12, <br>Year = 1901-2024 <br>(all inclusive) | day = 10<br>month = 3 <br>year = 2006      | (10, 3, 2006)             |
+| 2   | String month                                                           | day = 10<br>month = "March"<br>year = 2006 | (10, 3, 2006)             |
 | 3   | Invalid day                                                            | day = 0<br>month = 2<br>year = 2001        | ValueError                |
 | 4   | Invalid month                                                          | day = 10<br>month = 0<br>year = 1999       | ValueError                |
 | 5   | Invalid year                                                           | day = 20<br>month = 4<br>year = 9999       | ValueError                |
