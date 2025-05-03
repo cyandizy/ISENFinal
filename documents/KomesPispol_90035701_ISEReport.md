@@ -57,13 +57,13 @@ Checks if a lucky number is a master number.
 Class Date
 Imports: None
 
-Stores day, month, year in integer format
+Stores day, month, year in integer format.
 
 Method prompt_date
 Imports: None
 Exports: day, month, year (integer)
 
-Prompts for user input for day, month, and year
+Prompts for user input for day, month, and year, validifies and calls format_month to format month
 
 Method format_month
 Imports: None
@@ -87,8 +87,8 @@ detailed description)`
 ##### Equivalence Partitioning
 | No. | Category          | Input<br>birthday | Expected Output<br>lucky_number |
 | --- | ----------------- | ----------------- | ------------------------------- |
-| 1   | Not master number | Date(10, 3, 2006) | 3                               |
-| 2   | Master number     | Date(6, 6, 2017)  | 22                              |
+| 1   | Not master number | = 10, 3, 2006     | 3                               |
+| 2   | Master number     | = 6, 6, 2017      | 22                              |
 
 #### Submodule get_lucky_animal
 ##### Equivalence Partitioning
@@ -130,10 +130,10 @@ detailed description)`
 ### Module logic
 #### Submodule same_luck
 ##### Equivalence Partitioning
-| No. | Category<br>                                                                 | Input<br>                                                        | Expected Output<br>result |
-| --- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------- | ------------------------- |
-| 1   | Lucky number of birthday1 <br>is equal to <br>lucky number of birthday 2     | birthday1 = Date(09, 07, 2005)<br>birthday2 = Date(08, 08, 2005) | True                      |
-| 2   | Lucky number of birthday1 <br>is NOT equal to <br>lucky number of birthday 2 | birthday1 = Date(09, 07, 2005)<br>birthday2 = Date(08, 09, 2005) | False                     |
+| No. | Category<br>                                                                 | Input<br>                                        | Expected Output<br>result |
+| --- | ---------------------------------------------------------------------------- | ------------------------------------------------ | ------------------------- |
+| 1   | Lucky number of birthday1 <br>is equal to <br>lucky number of birthday 2     | birthday1 = 9, 7, 2005<br>birthday2 = 8, 8, 2005 | True                      |
+| 2   | Lucky number of birthday1 <br>is NOT equal to <br>lucky number of birthday 2 | birthday1 = 9, 7, 2005<br>birthday2 = 8, 9, 2005 | False                     |
 
 #### Submodule is_master_number
 ##### Equivalence Partitioning
@@ -212,15 +212,15 @@ The debug processes can be seen in the Version Control section.
 
 # Summary
 
-| Module name            | BB (EP) | BB (EVA) | WB  | Data types                  | Form of IO                                                  | EP   | BVA  | WB  |
-| ---------------------- | ------- | -------- | --- | --------------------------- | ----------------------------------------------------------- | ---- | ---- | --- |
-| calculate_lucky_number | Done    | -        |     | Date -> integer             | Input: <br>Keyboard/<br>File<br>Output:<br>Console/<br>File | Done | -    |     |
-| get_lucky_animal       | Done    | -        |     | integer -> string           | Input:<br>Keyboard/<br>File<br>Output:<br>Console/<br>File  | Done | -    |     |
-| get_generation         | Done    | Done     |     | integer -> string           | Input:<br>Keyboard/<br>File<br>Output:<br>Console/<br>File  | Done | Done |     |
-| same_luck              | Done    | -        |     | Date -> boolean             | Input:<br>Keyboard<br>Output:<br>Console                    | Done | -    |     |
-| is_master_number       | Done    | -        |     | integer -> boolean          | Input:<br>Parameter<br>Output:<br>Return                    | Done | -    |     |
-| Date's Constructor     | Done    | -        |     | integer, string <br>-> Date | Input:<br>Parameter<br>Output:<br>Return                    | Done | -    |     |
-| format_month           | Done    | -        |     | string <br>-> integer       | Input:<br>Parameter<br>Output:<br>Return                    | Done | -    |     |
+| Module name            | BB (EP) | BB (EVA) | WB  | Data types            | Form of IO                                | EP   | BVA  | WB  |
+| ---------------------- | ------- | -------- | --- | --------------------- | ----------------------------------------- | ---- | ---- | --- |
+| calculate_lucky_number | Done    | -        |     | Date -> integer       | Input: <br>Keyboard<br>Output:<br>Return  | Done | -    |     |
+| get_lucky_animal       | Done    | -        |     | integer -> string     | Input: <br>Parameter<br>Output:<br>Return | Done | -    |     |
+| get_generation         | Done    | Done     |     | integer -> string     | Input: <br>Parameter<br>Output:<br>Return | Done | Done |     |
+| same_luck              | Done    | -        |     | Date -> boolean       | Input: <br>Parameter<br>Output:<br>Return | Done | -    |     |
+| is_master_number       | Done    | -        |     | integer -> boolean    | Input: <br>Parameter<br>Output:<br>Return | Done | -    |     |
+| prompt_date            | Done    | -        |     | string<br>-> Date     | Input: <br>Keyboard<br>Output:<br>Return  | Done | -    |     |
+| format_month           | Done    | -        |     | string <br>-> integer | Input: <br>Parameter<br>Output:<br>Return | Done | -    |     |
 # Version control
 `Log of the use of your version control system (image of the log is sufficient), any explanation/discussion on version control. (refer part 1 of the detailed description)`
 # Discussion
