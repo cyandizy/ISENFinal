@@ -1,9 +1,8 @@
 import calculator
 
-def same_luck():
-    lucky_number1 = calculator.calculate_lucky_number()
-    lucky_number2 = calculator.calculate_lucky_number()
-    if (lucky_number1 == lucky_number2):
+def same_luck(birthday1, birthday2):
+    if (calculator.calculate_lucky_number(birthday1) ==
+        calculator.calculate_lucky_number(birthday2)):
         return True
     else:
         return False
