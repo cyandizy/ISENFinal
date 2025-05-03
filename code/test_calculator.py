@@ -15,9 +15,7 @@ class TestCalculator(unittest.TestCase):
     
         for i in range(len(expected)):
             with patch('builtins.input', side_effect=[str(x) for x in birthday[i]]):
-                test_date = Date()
-                test_date.prompt_date()
-                self.assertEqual(expected[i], calculator.calculate_lucky_number(test_date), msg[i])
+                self.assertEqual(expected[i], calculator.calculate_lucky_number(), msg[i])
 
     def test_get_lucky_animal(self):
         lucky_number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33, 0]

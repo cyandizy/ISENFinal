@@ -40,18 +40,19 @@ class TestDate(unittest.TestCase):
 
         for i in range(len(expected)):
             with patch('builtins.input', side_effect=[str(x) for x in dates[i]]):
-                test_date = Date()
                 if expected[i] == ValueError:
                     with self.assertRaises(ValueError, msg=msg[i]):
-                        test_date.prompt_date()
-                else:                    
-                    test_date.prompt_date()
+                        test_date = Date()
+                else:      
+                    test_date = Date()              
                     self.assertEqual(expected[i][0], test_date.day, msg[i])
                     self.assertEqual(expected[i][1], test_date.month, msg[i])
                     self.assertEqual(expected[i][2], test_date.year, msg[i])
 
     def test_format_month(self):
-        test_date = Date(1, 4, 2012)
+        with patch('builtins.input', side_effect=[str(x) for x in (1, 4, 2006)]):
+            test_date = Date()
+
         month = [
             "January", "February", "March", "April", "May", "June",
             "July", "August", "September", "October", "November", "December",
