@@ -76,13 +76,16 @@ detailed description)`
 # Black-box test cases
 ### Module calculator
 #### Submodule calculate_lucky_number
+##### Equivalence Partitioning
 | No. | Category          | Input<br>birthday | Expected Output<br>lucky_number |
 | --- | ----------------- | ----------------- | ------------------------------- |
 | 1   | Not master number | Date(10, 3, 2006) | 3                               |
 | 2   | Master number     | Date(6, 6, 2017)  | 22                              |
 
 
+
 #### Submodule get_lucky_animal
+##### Equivalence Partitioning
 | No. | Category<br>lucky_number<br>                      | Input<br>lucky_number | Expected Output<br>lucky_animal |
 | --- | ------------------------------------------------- | --------------------- | ------------------------------- |
 | 1   | == 1                                              | = 1                   | "Parrot"                        |
@@ -99,7 +102,9 @@ detailed description)`
 | 12  | == 33                                             | = 33                  | "Turtle"                        |
 | 13  | Not in range 1-9 inclusive and not 11, 22, and 33 | = 0                   | ""                              |
 
+
 #### Submodule get_generation
+##### Equivalence Partitioning
 | No. | Category             | Input<br>year | Expected Output<br>generation |
 | --- | -------------------- | ------------- | ----------------------------- |
 | 1   | 1901 <= year <= 1945 | = 1930        | "Silent Generation"           |
@@ -108,13 +113,17 @@ detailed description)`
 | 4   | 1980 <= year <= 1994 | = 1990        | "Millennials"                 |
 | 5   | 1995 <= year <= 2009 | = 2000        | "Generation Z"                |
 | 6   | 2010 <= year <= 2024 | = 2020        | "Generation Alpha"            |
+
 ### Module logic
 #### Submodule same_luck
+##### Equivalence Partitioning
 | No. | Category<br>                                                                 | Input<br>                                                        | Expected Output<br>result |
 | --- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------- | ------------------------- |
 | 1   | Lucky number of birthday1 <br>is equal to <br>lucky number of birthday 2     | birthday1 = Date(09, 07, 2005)<br>birthday2 = Date(08, 08, 2005) | True                      |
 | 2   | Lucky number of birthday1 <br>is NOT equal to <br>lucky number of birthday 2 | birthday1 = Date(09, 07, 2005)<br>birthday2 = Date(08, 09, 2005) | False                     |
+
 #### Submodule is_master_number
+##### Equivalence Partitioning
 | No. | Category<br>lucky_number | Input<br>lucky_number | Expected Output<br>result |
 | --- | ------------------------ | --------------------- | ------------------------- |
 | 1   | == 11                    | = 11                  | True                      |
@@ -124,10 +133,11 @@ detailed description)`
 | 5   | != 22                    | = 14                  | False                     |
 | 6   | != 33                    | = 43                  | False                     |
 
+
 ### Module data_structures
 #### Class Date
 #### Constructor
-
+##### Equivalence Partitioning
 | No. | Category<br>                                                           | Input<br>                                  | Expected Output<br>result |
 | --- | ---------------------------------------------------------------------- | ------------------------------------------ | ------------------------- |
 | 1   | Day = 1-31, <br>Month = 1-12, <br>Year = 1901-2024 <br>(all inclusive) | day = 10<br>month = 3 <br>year = 2006      | (10, 3, 2006)             |
@@ -140,7 +150,9 @@ detailed description)`
 | 8   | Invalid day and year                                                   | day = 111<br>month = 12<br>year = 9        | ValueError                |
 | 9   | Invalid day, month, and year                                           | day = 99<br>month = 99<br>year = 9999      | ValueError                |
 
+
 #### Method format_month
+##### Equivalence Partitioning
 | No. | Category<br>                    | Input<br>month | Expected Output<br>month |
 | --- | ------------------------------- | -------------- | ------------------------ |
 | 1   | January                         | = "January"    | 1                        |
@@ -170,6 +182,7 @@ detailed description)`
 | 25  | All lowercase                   | = "jan"        | 1                        |
 | 26  | All uppercase                   | = "JAN"        | 1                        |
 | 27  | String does not match any month | = "Jupiter"    | ValueError               |
+
 
 # White-box test cases
 `All test cases you have designed as the answer for part 5 of this assessment, produced in the
