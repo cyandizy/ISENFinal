@@ -1,19 +1,27 @@
 class Date:
-    def __init__(self, day, month, year):
-        self.day = day
-        self.year = year
+    def __init__(self):
+        self.day, self.month, self.year = self.prompt_date()
 
-        if isinstance(month, str):
-            self.month = self.format_month(month)
+    def prompt_date(self):
+        day = input("Input day (integer)> ")
+        month = input("Input month (integer or string)> ")
+        year = input("Input year (string)> ")
+        day = int(day)
+        year = int(year)
+
+        if not month.isdigit():
+            month = self.format_month(month)
         else:
-            self.month = month
+            month = int(month)
 
-        if self.day not in range(1, 32):
+        if day not in range(1, 32):
             raise ValueError("Day value must be from 1 to 31 inclusive.")
-        elif self.month not in range(1, 13):
+        elif month not in range(1, 13):
             raise ValueError("Month value must be from 1 to 12 inclusive.")
-        elif self.year not in range(1901, 2025):
+        elif year not in range(1901, 2025):
             raise ValueError("Year value must be from 1901 to 2024 inclusive")
+                
+        return (day, month, year)
 
     def format_month(self, month: str):
         month = month.lower()
