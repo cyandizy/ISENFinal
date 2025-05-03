@@ -7,14 +7,20 @@ def prompt_date(prompt_message):
     valid_input = False
     while not valid_input:
         day = input("Input day (integer)> ")
-        month = input("Input month (integer or string)> ")
+        month: str = input("Input month (integer or string)> ")
         year = input("Input year (string)> ")
+        
         try:
+            day = int(day)
+            if month.isdigit():
+                month = int(month)
+            year = int(year)
+
             date = Date(day, month, year)
             valid_input = True
 
-        except ValueError:
-            print("One of the input was invalid, please try again...")
+        except ValueError as e:
+            print(f"One of the input was invalid, please try again... {e}")
     return date
 
 if __name__ == "__main__":
@@ -31,19 +37,22 @@ if __name__ == "__main__":
         input_scenario = input("Functionality A/B/C> ")
         if input_scenario[0].upper() == "A":
             birthday = prompt_date("Please enter your birthday.")
-            generation = calculator.get_generation(birthday)
+            generation = calculator.get_generation(birthday.year)
             print(f"You belong to {generation}.")
+            print()
             lucky_number = calculator.calculate_lucky_number(birthday)
             if logic.is_master_number(lucky_number):
                 print("Congratuation! Your lucky number is a master number!")
             lucky_animal = calculator.get_lucky_animal(lucky_number)
+            print()
             print(f"Your lucky number is {lucky_number},")
             print(f"and animal is {lucky_animal}.")
 
             valid_input = True
         
-        elif input_scenario[1].upper() == "B":
+        elif input_scenario[0].upper() == "B":
             birthday1 = prompt_date("Please enter birthday 1.")
+            print()
             birthday2 = prompt_date("Please enter birthday 2.")
             if logic.same_luck(birthday1, birthday2):
                 number = calculator.calculate_lucky_number(birthday1)
@@ -54,9 +63,9 @@ if __name__ == "__main__":
 
             valid_input = True
 
-        elif input_scenario[2].upper() == "C":
+        elif input_scenario[0].upper() == "C":
             birthday = prompt_date("Please enter your birthday.")
-            generation = calculator.get_generation(birthday)
+            generation = calculator.get_generation(birthday.year)
             print(f"You belong to {generation}.")
 
             valid_input = True
