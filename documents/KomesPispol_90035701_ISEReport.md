@@ -1,7 +1,9 @@
 # Cover page
-`Include the assessment name, your name as in Moodle, Curtin student ID, practical class (date/
-time). This may not be in a separate page, but as the first thing in your document in a clear
-format.`
+### Assignment
+#### By Komes Pispol 90035701
+#### Class Tuesday, 9:00 AM
+
+
 # Introduction
 `A brief overview of work you have done.`
 # Module descriptions
@@ -82,8 +84,6 @@ detailed description)`
 | 1   | Not master number | Date(10, 3, 2006) | 3                               |
 | 2   | Master number     | Date(6, 6, 2017)  | 22                              |
 
-
-
 #### Submodule get_lucky_animal
 ##### Equivalence Partitioning
 | No. | Category<br>lucky_number<br>                      | Input<br>lucky_number | Expected Output<br>lucky_animal |
@@ -101,7 +101,6 @@ detailed description)`
 | 11  | == 22                                             | = 22                  | "Lion"                          |
 | 12  | == 33                                             | = 33                  | "Turtle"                        |
 | 13  | Not in range 1-9 inclusive and not 11, 22, and 33 | = 0                   | ""                              |
-
 
 #### Submodule get_generation
 ##### Equivalence Partitioning
@@ -140,7 +139,6 @@ detailed description)`
 | 4   | != 11                    | = 20                  | False                     |
 | 5   | != 22                    | = 14                  | False                     |
 | 6   | != 33                    | = 43                  | False                     |
-
 
 ### Module data_structures
 #### Class Date
@@ -195,20 +193,28 @@ detailed description)`
 tubular format shown in lecture 10, brief explanation on your test design, and any
 assumptions you made.`
 # Test implementation and test execution
-`A brief description of how to run your test code with correct commands.
-Results of test execution with outputs of test successes and failures, with short discussion
-of results/improvements from part 5 of this assessment.`
+I have implemented test cases for each submodule in Black-Box Test Cases section. Most of test cases are in form of Equivalence Partitioning. One test case is in form of Boundary Value Analysis, which is submodule get_generation, which I deemed appropriate.
+
+All test cases can be executed as follows,
+```
+python3 -m unittest
+```
+
+The result is that all test cases passed as expected.
+![[unittest_passed.png]]
+The debug processes can be seen in the Version Control section.
+
 # Summary
 
-| Module name            | BB (EP) | BB (EVA) | WB  | Data types                  | Form of IO                                                  | EP   | BVA   | WB  |
-| ---------------------- | ------- | -------- | --- | --------------------------- | ----------------------------------------------------------- | ---- | ----- | --- |
-| calculate_lucky_number | Done    | -        |     | Date -> integer             | Input: <br>Keyboard/<br>File<br>Output:<br>Console/<br>File | Done | -     |     |
-| get_lucky_animal       | Done    | -        |     | integer -> string           | Input:<br>Keyboard/<br>File<br>Output:<br>Console/<br>File  | Done | -     |     |
-| get_generation         | Done    | Done     |     | integer -> string           | Input:<br>Keyboard/<br>File<br>Output:<br>Console/<br>File  | Done | To do |     |
-| same_luck              | Done    | -        |     | Date -> boolean             | Input:<br>Keyboard<br>Output:<br>Console                    | Done | -     |     |
-| is_master_number       | Done    | -        |     | integer -> boolean          | Input:<br>Parameter<br>Output:<br>Return                    | Done | -     |     |
-| Date's Constructor     | Done    | -        |     | integer, string <br>-> Date | Input:<br>Parameter<br>Output:<br>Return                    | Done | -     |     |
-| format_month           | Done    | -        |     | string <br>-> integer       | Input:<br>Parameter<br>Output:<br>Return                    | Done | -     |     |
+| Module name            | BB (EP) | BB (EVA) | WB  | Data types                  | Form of IO                                                  | EP   | BVA  | WB  |
+| ---------------------- | ------- | -------- | --- | --------------------------- | ----------------------------------------------------------- | ---- | ---- | --- |
+| calculate_lucky_number | Done    | -        |     | Date -> integer             | Input: <br>Keyboard/<br>File<br>Output:<br>Console/<br>File | Done | -    |     |
+| get_lucky_animal       | Done    | -        |     | integer -> string           | Input:<br>Keyboard/<br>File<br>Output:<br>Console/<br>File  | Done | -    |     |
+| get_generation         | Done    | Done     |     | integer -> string           | Input:<br>Keyboard/<br>File<br>Output:<br>Console/<br>File  | Done | Done |     |
+| same_luck              | Done    | -        |     | Date -> boolean             | Input:<br>Keyboard<br>Output:<br>Console                    | Done | -    |     |
+| is_master_number       | Done    | -        |     | integer -> boolean          | Input:<br>Parameter<br>Output:<br>Return                    | Done | -    |     |
+| Date's Constructor     | Done    | -        |     | integer, string <br>-> Date | Input:<br>Parameter<br>Output:<br>Return                    | Done | -    |     |
+| format_month           | Done    | -        |     | string <br>-> integer       | Input:<br>Parameter<br>Output:<br>Return                    | Done | -    |     |
 # Version control
 `Log of the use of your version control system (image of the log is sufficient), any explanation/discussion on version control. (refer part 1 of the detailed description)`
 # Discussion
