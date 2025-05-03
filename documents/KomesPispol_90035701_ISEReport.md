@@ -180,7 +180,16 @@ assumptions you made.`
 Results of test execution with outputs of test successes and failures, with short discussion
 of results/improvements from part 5 of this assessment.`
 # Summary
-`Table you have produced in the part 6 of this assessment.`
+
+| Module name            | BB (EP) | BB (EVA) | WB  | Data types                  | Form of IO                                                  | EP   | BVA   | WB  |
+| ---------------------- | ------- | -------- | --- | --------------------------- | ----------------------------------------------------------- | ---- | ----- | --- |
+| calculate_lucky_number | Done    | -        |     | Date -> integer             | Input: <br>Keyboard/<br>File<br>Output:<br>Console/<br>File | Done | -     |     |
+| get_lucky_animal       | Done    | -        |     | integer -> string           | Input:<br>Keyboard/<br>File<br>Output:<br>Console/<br>File  | Done | -     |     |
+| get_generation         | Done    | To do    |     | integer -> string           | Input:<br>Keyboard/<br>File<br>Output:<br>Console/<br>File  | Done | To do |     |
+| same_luck              | Done    | -        |     | Date -> boolean             | Input:<br>Keyboard<br>Output:<br>Console                    | Done | -     |     |
+| is_master_number       | Done    | -        |     | integer -> boolean          | Input:<br>Parameter<br>Output:<br>Return                    | Done | -     |     |
+| Date's Constructor     | Done    | To do    |     | integer, string <br>-> Date | Input:<br>Parameter<br>Output:<br>Return                    | Done | To do |     |
+| format_month           | Done    | -        |     | string <br>-> integer       | Input:<br>Parameter<br>Output:<br>Return                    | Done | -     |     |
 # Version control
 `Log of the use of your version control system (image of the log is sufficient), any explanation/discussion on version control. (refer part 1 of the detailed description)`
 # Discussion
