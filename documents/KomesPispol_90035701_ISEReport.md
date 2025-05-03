@@ -158,7 +158,6 @@ detailed description)`
 | 8   | Invalid day and year                                                   | day = 111<br>month = 12<br>year = 9        | ValueError                |
 | 9   | Invalid day, month, and year                                           | day = 99<br>month = 99<br>year = 9999      | ValueError                |
 
-
 #### Method format_month
 ##### Equivalence Partitioning
 | No. | Category<br>                    | Input<br>month | Expected Output<br>month |
@@ -191,7 +190,6 @@ detailed description)`
 | 26  | All uppercase                   | = "JAN"        | 1                        |
 | 27  | String does not match any month | = "Jupiter"    | ValueError               |
 
-
 # White-box test cases
 `All test cases you have designed as the answer for part 5 of this assessment, produced in the
 tubular format shown in lecture 10, brief explanation on your test design, and any
@@ -206,10 +204,10 @@ of results/improvements from part 5 of this assessment.`
 | ---------------------- | ------- | -------- | --- | --------------------------- | ----------------------------------------------------------- | ---- | ----- | --- |
 | calculate_lucky_number | Done    | -        |     | Date -> integer             | Input: <br>Keyboard/<br>File<br>Output:<br>Console/<br>File | Done | -     |     |
 | get_lucky_animal       | Done    | -        |     | integer -> string           | Input:<br>Keyboard/<br>File<br>Output:<br>Console/<br>File  | Done | -     |     |
-| get_generation         | Done    | To do    |     | integer -> string           | Input:<br>Keyboard/<br>File<br>Output:<br>Console/<br>File  | Done | To do |     |
+| get_generation         | Done    | Done     |     | integer -> string           | Input:<br>Keyboard/<br>File<br>Output:<br>Console/<br>File  | Done | To do |     |
 | same_luck              | Done    | -        |     | Date -> boolean             | Input:<br>Keyboard<br>Output:<br>Console                    | Done | -     |     |
 | is_master_number       | Done    | -        |     | integer -> boolean          | Input:<br>Parameter<br>Output:<br>Return                    | Done | -     |     |
-| Date's Constructor     | Done    | To do    |     | integer, string <br>-> Date | Input:<br>Parameter<br>Output:<br>Return                    | Done | To do |     |
+| Date's Constructor     | Done    | -        |     | integer, string <br>-> Date | Input:<br>Parameter<br>Output:<br>Return                    | Done | -     |     |
 | format_month           | Done    | -        |     | string <br>-> integer       | Input:<br>Parameter<br>Output:<br>Return                    | Done | -     |     |
 # Version control
 `Log of the use of your version control system (image of the log is sufficient), any explanation/discussion on version control. (refer part 1 of the detailed description)`
