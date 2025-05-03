@@ -113,6 +113,14 @@ detailed description)`
 | 4   | 1980 <= year <= 1994 | = 1990        | "Millennials"                 |
 | 5   | 1995 <= year <= 2009 | = 2000        | "Generation Z"                |
 | 6   | 2010 <= year <= 2024 | = 2020        | "Generation Alpha"            |
+##### Boundary Value Analysis
+| No. | Category                         | Input<br>                  | Expected Output<br>generation         |
+| --- | -------------------------------- | -------------------------- | ------------------------------------- |
+| 1   | Silent Generation / Baby Boomers | year = 1945<br>year = 1946 | "Silent Generation"<br>"Baby Boomers" |
+| 2   | Baby Boomers / Generation X      | year = 1964<br>year = 1965 | "Baby Boomers"<br>"Generation X"      |
+| 3   | Generation X / Millennials       | year = 1979<br>year = 1980 | "Generation X"<br>"Millennials"       |
+| 4   | Millennials / Generation Z       | year = 1994<br>year = 1995 | "Millennials"<br>"Generation Z"       |
+| 5   | Generation Z / Generation Alpha  | year = 2009<br>year = 2010 | "Generation Z"<br>"Generation Alpha"  |
 
 ### Module logic
 #### Submodule same_luck
