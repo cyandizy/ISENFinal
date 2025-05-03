@@ -18,9 +18,9 @@ class TestLogic(unittest.TestCase):
         
         for i in range(len(expected)):
             with patch('builtins.input', side_effect=[str(x) for x in (*birthday1[i], *birthday2[i])]):
-                birthday1 = Date()
-                birthday2 = Date()
-                result = logic.same_luck(birthday1, birthday2)
+                date1 = Date()
+                date2 = Date()
+                result = logic.same_luck(date1, date2)
                 self.assertEqual(expected[i], result, msg[i])
 
     def test_is_master_number(self):
