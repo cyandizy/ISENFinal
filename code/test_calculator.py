@@ -1,10 +1,11 @@
 import calculator
 from data_structures import Date
 import unittest
+from unittest.mock import patch
 
 class TestCalculator(unittest.TestCase):
     def test_calculate_lucky_number(self):
-        birthday = [Date(10, 3, 2006), Date(6, 6, 2017)]
+        birthday = [(10, 3, 2006), (6, 6, 2017)]
         
         expected = [3, 22]
         
@@ -13,10 +14,10 @@ class TestCalculator(unittest.TestCase):
             "Case: Master number"]
     
         for i in range(len(expected)):
-            if expected[i] == Exception:
-                self.assertRaises(expected[i], calculator.calculate_lucky_number(birthday[i]), msg[i])
-            else:
-                self.assertEqual(expected[i], calculator.calculate_lucky_number(birthday[i]), msg[i])
+            with patch('builtins.input', side_effect=[str(x) for x in birthday[i]]):
+                test_date = Date()
+                test_date.prompt_date()
+                self.assertEqual(expected[i], calculator.calculate_lucky_number(test_date), msg[i])
 
     def test_get_lucky_animal(self):
         lucky_number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33, 0]
