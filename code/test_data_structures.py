@@ -1,8 +1,9 @@
 from data_structures import *
 import unittest
+from unittest.mock import patch
 
 class TestDate(unittest.TestCase):
-    def test_constructor(self):
+    def test_prompt_date(self):
         dates = [
             (10, 3, 2006),
             (10, "March", 2006),
@@ -38,14 +39,16 @@ class TestDate(unittest.TestCase):
         ]
 
         for i in range(len(expected)):
-            if expected[i] == ValueError:
-                with self.assertRaises(ValueError, msg=msg[i]):
-                    Date(*dates[i])
-            else:
-                test_date = Date(*dates[i])
-                self.assertEqual(expected[i][0], test_date.day, msg[i])
-                self.assertEqual(expected[i][1], test_date.month, msg[i])
-                self.assertEqual(expected[i][2], test_date.year, msg[i])
+            with patch('builtins.input', side_effect=[str(x) for x in dates[i]]):
+                test_date = Date()
+                if expected[i] == ValueError:
+                    with self.assertRaises(ValueError, msg=msg[i]):
+                        test_date.prompt_date()
+                else:                    
+                    test_date.prompt_date()
+                    self.assertEqual(expected[i][0], test_date.day, msg[i])
+                    self.assertEqual(expected[i][1], test_date.month, msg[i])
+                    self.assertEqual(expected[i][2], test_date.year, msg[i])
 
     def test_format_month(self):
         test_date = Date(1, 4, 2012)
