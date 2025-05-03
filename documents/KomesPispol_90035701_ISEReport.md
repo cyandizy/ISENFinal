@@ -55,13 +55,19 @@ Checks if a lucky number is a master number.
 
 ```
 Class Date
-Imports: day (integer), month (integer or string), year (integer)
+Imports: None
 
 Stores day, month, year in integer format
 
+Method prompt_date
+Imports: None
+Exports: day, month, year (integer)
+
+Prompts for user input for day, month, and year
+
 Method format_month
-import: None
-export: month (integer)
+Imports: None
+Exports: month (integer)
 
 Formats month to integer
 ```
@@ -142,7 +148,7 @@ detailed description)`
 
 ### Module data_structures
 #### Class Date
-#### Constructor
+#### Method prompt_date
 ##### Equivalence Partitioning
 | No. | Category<br>                                                           | Input<br>                                  | Expected Output<br>result |
 | --- | ---------------------------------------------------------------------- | ------------------------------------------ | ------------------------- |
