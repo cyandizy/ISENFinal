@@ -1,7 +1,8 @@
 import logic
 from data_structures import Date
 import unittest
-from unittest.mock import patch
+import io
+import sys
 
 class TestLogic(unittest.TestCase):
     def test_same_luck(self):
@@ -17,11 +18,14 @@ class TestLogic(unittest.TestCase):
                "Case: Lucky number of birthday1 != equal to lucky number of birthday 2"]
         
         for i in range(len(expected)):
-            with patch('builtins.input', side_effect=[str(x) for x in (*birthday1[i], *birthday2[i])]):
-                date1 = Date()
-                date2 = Date()
-                result = logic.same_luck(date1, date2)
-                self.assertEqual(expected[i], result, msg[i])
+            date1 = Date()
+            sys.stdin = io.StringIO(f"{birthday1[i][0]}\n{birthday1[i][1]}\n{birthday1[i][2]}")
+            date1.prompt_date()
+            date2 = Date()
+            sys.stdin = io.StringIO(f"{birthday2[i][0]}\n{birthday2[i][1]}\n{birthday2[i][2]}")
+            date2.prompt_date()
+            result = logic.same_luck(date1, date2)
+            self.assertEqual(expected[i], result, msg[i])
 
     def test_is_master_number(self):
         lucky_number = [11, 22, 33, 20, 14, 43]

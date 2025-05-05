@@ -1,7 +1,8 @@
 import calculator
 from data_structures import Date
 import unittest
-from unittest.mock import patch
+import io
+import sys
 
 class TestCalculator(unittest.TestCase):
     def test_calculate_lucky_number(self):
@@ -14,8 +15,10 @@ class TestCalculator(unittest.TestCase):
             "Case: Master number"]
     
         for i in range(len(expected)):
-            with patch('builtins.input', side_effect=[str(x) for x in birthday[i]]):
-                self.assertEqual(expected[i], calculator.calculate_lucky_number(), msg[i])
+            sys.stdin = io.StringIO(f"{birthday[i][0]}\n{birthday[i][1]}\n{birthday[i][2]}")
+            date = Date()
+            date.prompt_date()
+            self.assertEqual(expected[i], calculator.calculate_lucky_number(date), msg[i])
 
     def test_get_lucky_animal(self):
         lucky_number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33, 0]

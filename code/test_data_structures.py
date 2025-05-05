@@ -1,6 +1,7 @@
 from data_structures import *
 import unittest
-from unittest.mock import patch
+import io
+import sys
 
 class TestDate(unittest.TestCase):
     def test_prompt_date(self):
@@ -39,19 +40,23 @@ class TestDate(unittest.TestCase):
         ]
 
         for i in range(len(expected)):
-            with patch('builtins.input', side_effect=[str(x) for x in dates[i]]):
-                if expected[i] == ValueError:
-                    with self.assertRaises(ValueError, msg=msg[i]):
-                        test_date = Date()
-                else:      
-                    test_date = Date()              
-                    self.assertEqual(expected[i][0], test_date.day, msg[i])
-                    self.assertEqual(expected[i][1], test_date.month, msg[i])
-                    self.assertEqual(expected[i][2], test_date.year, msg[i])
+            if expected[i] == ValueError:
+                with self.assertRaises(ValueError, msg=msg[i]):
+                    sys.stdin = io.StringIO(f"{dates[i][0]}\n{dates[i][1]}\n{dates[i][2]}")
+                    test_date = Date()
+                    test_date.prompt_date()
+            else:      
+                sys.stdin = io.StringIO(f"{dates[i][0]}\n{dates[i][1]}\n{dates[i][2]}")
+                test_date = Date()     
+                test_date.prompt_date()         
+                self.assertEqual(expected[i][0], test_date.day, msg[i])
+                self.assertEqual(expected[i][1], test_date.month, msg[i])
+                self.assertEqual(expected[i][2], test_date.year, msg[i])
 
     def test_format_month(self):
-        with patch('builtins.input', side_effect=[str(x) for x in (1, 4, 2006)]):
-            test_date = Date()
+        sys.stdin = io.StringIO("1\n4\n2006")
+        test_date = Date()
+        test_date.prompt_date()
 
         month = [
             "January", "February", "March", "April", "May", "June",
