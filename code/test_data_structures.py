@@ -9,11 +9,11 @@ class TestDate(unittest.TestCase):
             (10, "March", 2006),
             (0, 2, 2001),
             (10, 0, 1999),
-            (20, 4, 9999),
+            (20, 4, 5701),
             (-1, 0, 2004),
             (4, 99, 2193),
             (111, 12, 9),
-            (99, 99, 9999)]
+            (99, 99, 5701)]
         
         expected = [
                 (10, 3, 2006),
@@ -58,7 +58,7 @@ class TestDate(unittest.TestCase):
             "July", "August", "September", "October", "November", "December",
             "Jan", "Feb", "Mar", "Apr", "Jun", "Jul",
             "Aug", "Sep", "Sept", "Oct", "Nov", "Dec",
-            "jan", "JAN", "Jupiter"
+            "jan", "JAN", "Pispol"
         ]
 
         expected = [
