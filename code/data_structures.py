@@ -1,6 +1,8 @@
 class Date:
     def __init__(self):
-        self.day, self.month, self.year = self.prompt_date()
+        self.day = None
+        self.month = None
+        self.year = None
 
     def prompt_date(self):
         day = input("Input day (integer)> ")
@@ -21,7 +23,9 @@ class Date:
         elif year not in range(1901, 2025):
             raise ValueError("Year value must be from 1901 to 2024 inclusive")
                 
-        return (day, month, year)
+        self.day = day
+        self.month = month
+        self.year = year
 
     def format_month(self, month: str):
         month = month.lower()
@@ -32,6 +36,6 @@ class Date:
             "aug": 8, "sep": 9, "sept": 9, "oct": 10, "nov": 11, "dec": 12
         }
         if month not in month_dict.keys():
-            raise ValueError
+            raise ValueError(f"{month} is not a month.")
 
         return month_dict[month]

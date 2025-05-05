@@ -17,10 +17,17 @@ if __name__ == "__main__":
         choice = input_scenario[0]
         if choice == "A":
             print("Please enter your birthday.")
-            birthday = Date()
+            try:
+                birthday = Date()
+                birthday.prompt_date()
+            except Exception as e:
+                print(f"\nError: {e}\n")
+                print("Please try again...")
+                continue
+
             generation = calculator.get_generation(birthday.year)
-            print(f"You belong to {generation}.")
             print()
+            print(f"You belong to {generation}.")
             lucky_number = calculator.calculate_lucky_number(birthday)
             if logic.is_master_number(lucky_number):
                 print("Congratuations! Your lucky number is a master number!")
@@ -32,24 +39,39 @@ if __name__ == "__main__":
             break
         
         elif choice == "B":
-            print("Please enter birthday 1.")
-            birthday1 = Date()
-            print("Please enter birthday 2.")
-            birthday2 = Date()
+            try:
+                birthday1 = Date()
+                birthday2 = Date()
+                print("Please enter birthday 1.")
+                birthday1.prompt_date()
+                print("Please enter birthday 2.")
+                birthday2.prompt_date()
+            except Exception as e:
+                print(f"\nError: {e}\n")
+                print("Please try again...")
+                continue
+
             if logic.same_luck(birthday1, birthday2):
                 number = calculator.calculate_lucky_number(birthday1)
                 animal = calculator.get_lucky_animal(number)
-                print(f"Two birthdays have the same luck! You both have number {number} and {animal}")
+                print(f"\nTwo birthdays have the same luck! You both have number {number} and {animal}\n")
             else:
-                print("Unfortunately, two birthdays do not have the same luck.")
+                print("\nUnfortunately, two birthdays do not have the same luck.\n")
 
             break
 
         elif choice == "C":
             print("Please enter your birthday.")
-            birthday = Date()
+            try:
+                birthday = Date()
+                birthday.prompt_date()
+            except Exception as e:
+                print(f"\nError: {e}\n")
+                print("Please try again...")
+                continue
+            
             generation = calculator.get_generation(birthday.year)
-            print(f"You belong to {generation}.")
+            print(f"\nYou belong to {generation}.\n")
 
             break
         
