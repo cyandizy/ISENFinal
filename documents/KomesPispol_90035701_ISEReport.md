@@ -14,7 +14,7 @@ Submodule calculate_lucky_number
 Imports: birthday (Date)
 Exports: lucky_number (integer)
 
-Calculates lucky number.
+Calculates lucky number by calling creating Date object which will take day, month, year from keyboard input. Once calculated, the lucky number is output through return value.
 ```
 
 ```
@@ -22,7 +22,7 @@ Submodule get_lucky_animal
 Imports: lucky_number (integer)
 Exports: lucky_animal (string)
 
-Calculates lucky animal.
+Calculates lucky animal by receiving a lucky number as an argument and comparing it to a dictionary of lucky number to lucky animals. It outputs by returning the value. 
 ```
 
 ```
@@ -30,7 +30,7 @@ Submodule get_generation
 Imports: year (integer)
 Exports: generation (string)
 
-Calculates generation of a birthday.
+Calculates generation of a birthday by receiving year as an argument and comparing it to a set of conditions. It returns generation as output.
 ```
 
 ## Module logic
@@ -40,7 +40,7 @@ Submodule same_luck
 Imports: birthday1 (Date), birthday2 (Date)
 Exports: result (boolean)
 
-Checks if two dates have the same lucky number and lucky animal.
+Checks if two dates have the same lucky number and lucky animal by receiving birthday1 and birthday2 as arguments, then call calculate_lucky_number for each birthday and compare the results. It returns True if both have the same lucky number, and False if not.
 ```
 
 ```
@@ -48,7 +48,7 @@ Submodule is_master_number
 Imports: lucky_number (integer)
 Exports: result (boolean)
 
-Checks if a lucky number is a master number.
+Checks if a lucky number is a master number by receiving lucky number as argument and check if the number is in the list of master numbers of not. If it is in the list, return True. If it is not, return False.
 ```
 
 ## Module data_structures
@@ -57,30 +57,45 @@ Checks if a lucky number is a master number.
 Class Date
 Imports: None
 
-Stores day, month, year in integer format.
+Stores day, month, year in integer format. At constructor, call prompt_date and assign the return values of prompt_date to day, month, and year.
 
 Method prompt_date
 Imports: None
 Exports: day, month, year (integer)
 
-Prompts for user input for day, month, and year, validifies and calls format_month to format month
+Prompts for user input for day, month, and year, validifies if they are in correct formats and calls format_month to format month if month is not integer.
 
 Method format_month
 Imports: None
 Exports: month (integer)
 
-Formats month to integer
+Formats month to integer by using a dictionary that maps month strings to integers and return the integer. 
 ```
 
 # Modularity
-`A description on how to run your production code with correct commands.
+```A description on how to run your production code with correct commands.
 Sample output of running your production code. You must use screen shots to support your answer
 in this section.
 A brief explanation on how different modularity concepts is applied in your code.
 Your review checklist, results of reviewing your production code using the review checklist,
 with explanation on your results, and refactoring decisions.
 Revised module descriptions resulted after refactoring, if any (after doing the part 3 of the
-detailed description)`
+detailed description)```
+```
+
+### Instruction
+
+The code can be run by running `python3 main.py`. The user interface will appear, prompting to choose a scenario to run. 
+
+- Scenario A queries your birthday and outputs your generation, lucky number, animal, and check whether your lucky number is a master number or not.
+- Scenario B queries two birthdays and outputs whether they have the same lucky number and animal or not.
+- Scenario C queries your birthday and outputs the generation you belong to.
+
+If your scenario selection input is invalid, it will prompt until you enter a correct input.
+You need to rerun the code if you would like to try another scenario. 
+
+![[code_running_instructions.png]]
+
 # Black-box test cases
 ### Module calculator
 #### Submodule calculate_lucky_number
