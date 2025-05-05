@@ -14,7 +14,7 @@ Submodule calculate_lucky_number
 Imports: birthday (Date)
 Exports: lucky_number (integer)
 
-Calculates lucky number by calling creating Date object which will take day, month, year from keyboard input. Once calculated, the lucky number is output through return value.
+Calculates lucky number by receiving birthday from argument. Once calculated, the lucky number is output through return value.
 ```
 
 ```
@@ -51,20 +51,24 @@ Exports: result (boolean)
 Checks if a lucky number is a master number by receiving lucky number as argument and check if the number is in the list of master numbers of not. If it is in the list, return True. If it is not, return False.
 ```
 
-## Module data_structures
+## Module date
 
 ```
 Class Date
 Imports: None
 
-Stores day, month, year in integer format. At constructor, call prompt_date and assign the return values of prompt_date to day, month, and year.
+Stores day, month, year in integer format.
+```
 
+```
 Method prompt_date
 Imports: None
-Exports: day, month, year (integer)
+Exports: None
 
-Prompts for user input for day, month, and year, validifies if they are in correct formats and calls format_month to format month if month is not integer.
+Prompts for user input for day, month, and year, validifies if they are in correct formats and calls format_month to format month if month is not a digit. Finally, it modifies class members day, month, year with new values.
+```
 
+```
 Method format_month
 Imports: None
 Exports: month (integer)
@@ -100,10 +104,10 @@ You need to rerun the code if you would like to try another scenario.
 ### Module calculator
 #### Submodule calculate_lucky_number
 ##### Equivalence Partitioning
-| No. | Category          | Input<br>birthday | Expected Output<br>lucky_number |
-| --- | ----------------- | ----------------- | ------------------------------- |
-| 1   | Not master number | = 10, 3, 2006     | 3                               |
-| 2   | Master number     | = 6, 6, 2017      | 22                              |
+| No. | Category          | Input<br>birthday   | Expected Output<br>lucky_number |
+| --- | ----------------- | ------------------- | ------------------------------- |
+| 1   | Not master number | = Date(10, 3, 2006) | 3                               |
+| 2   | Master number     | = Date(6, 6, 2017)  | 22                              |
 
 #### Submodule get_lucky_animal
 ##### Equivalence Partitioning
@@ -225,17 +229,17 @@ The result is that all test cases passed as expected.
 ![[unittest_passed.png]]
 The debug processes can be seen in the Version Control section.
 
-# Summary
+# Traceability Matrix
 
-| Module name            | BB (EP) | BB (EVA) | WB  | Data types            | Form of IO                                | EP   | BVA  | WB  |
-| ---------------------- | ------- | -------- | --- | --------------------- | ----------------------------------------- | ---- | ---- | --- |
-| calculate_lucky_number | Done    | -        |     | Date -> integer       | Input: <br>Keyboard<br>Output:<br>Return  | Done | -    |     |
-| get_lucky_animal       | Done    | -        |     | integer -> string     | Input: <br>Parameter<br>Output:<br>Return | Done | -    |     |
-| get_generation         | Done    | Done     |     | integer -> string     | Input: <br>Parameter<br>Output:<br>Return | Done | Done |     |
-| same_luck              | Done    | -        |     | Date -> boolean       | Input: <br>Parameter<br>Output:<br>Return | Done | -    |     |
-| is_master_number       | Done    | -        |     | integer -> boolean    | Input: <br>Parameter<br>Output:<br>Return | Done | -    |     |
-| prompt_date            | Done    | -        |     | string<br>-> Date     | Input: <br>Keyboard<br>Output:<br>Return  | Done | -    |     |
-| format_month           | Done    | -        |     | string <br>-> integer | Input: <br>Parameter<br>Output:<br>Return | Done | -    |     |
+| Module name            | BB (EP) | BB (EVA) | WB  | Data types            | Form of IO                                                  | EP   | BVA  | WB  |
+| ---------------------- | ------- | -------- | --- | --------------------- | ----------------------------------------------------------- | ---- | ---- | --- |
+| calculate_lucky_number | Done    | -        |     | Date -> integer       | Input: <br>Parameter<br>Output:<br>Return                   | Done | -    |     |
+| get_lucky_animal       | Done    | -        |     | integer -> string     | Input: <br>Parameter<br>Output:<br>Return                   | Done | -    |     |
+| get_generation         | Done    | Done     |     | integer -> string     | Input: <br>Parameter<br>Output:<br>Return                   | Done | Done |     |
+| same_luck              | Done    | -        |     | Date -> boolean       | Input: <br>Parameter<br>Output:<br>Return                   | Done | -    |     |
+| is_master_number       | Done    | -        |     | integer -> boolean    | Input: <br>Parameter<br>Output:<br>Return                   | Done | -    |     |
+| prompt_date            | Done    | -        |     | string<br>-> Date     | Input: <br>Keyboard<br>Output:<br>Class member modification | Done | -    |     |
+| format_month           | Done    | -        |     | string <br>-> integer | Input: <br>Parameter<br>Output:<br>Return                   | Done | -    |     |
 # Version control
 `Log of the use of your version control system (image of the log is sufficient), any explanation/discussion on version control. (refer part 1 of the detailed description)`
 # Discussion
