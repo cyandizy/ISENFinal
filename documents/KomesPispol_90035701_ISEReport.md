@@ -77,17 +77,7 @@ Formats month to integer by using a dictionary that maps month strings to intege
 ```
 
 # Modularity
-```A description on how to run your production code with correct commands.
-Sample output of running your production code. You must use screen shots to support your answer
-in this section.
-A brief explanation on how different modularity concepts is applied in your code.
-Your review checklist, results of reviewing your production code using the review checklist,
-with explanation on your results, and refactoring decisions.
-Revised module descriptions resulted after refactoring, if any (after doing the part 3 of the
-detailed description)```
-```
-
-### Instruction
+### Instructions
 
 The code can be run by running `python3 main.py`. The user interface will appear, prompting to choose a scenario to run. 
 
@@ -99,6 +89,23 @@ If your scenario selection input is invalid, it will prompt until you enter a co
 You need to rerun the code if you would like to try another scenario. 
 
 ![[code_running_instructions.png]]
+
+### Modularity Checklist
+| No. | Question                        | Yes/No | Where |
+| --- | ------------------------------- | ------ | ----- |
+|     | **Coupling**                    |        |       |
+| 1   | More than 6 function parameters | No     |       |
+| 2   | Global variables                | No     |       |
+| 3   | Control flags                   | No     |       |
+|     | **Cohesion**                    |        |       |
+| 4   | Sequential tasks                | No     |       |
+| 5   | Different kinds of data         | No     |       |
+|     | **Redundancy**                  |        |       |
+| 6   | Duplication                     | No     |       |
+| 7   | Supersets                       | No     |       |
+
+In the code shows that each submodule only does what it is meant to do, which shows separation of concern. However, a submodule can also call other modules to help complete its task to avoid Redundancy when two submodule has a similar sub-task. For example, `calculate_lucky_number()` makes use `is_master_number()` as a part of its calculation while `is_master_number()`can also be used elsewhere, which is user interface in this case.
+Each module is designed with modularity in mind from the beginning to avoid too many refactoring.
 
 # Black-box test cases
 ### Module calculator
