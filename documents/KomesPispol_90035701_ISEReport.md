@@ -14,7 +14,7 @@ Submodule calculate_lucky_number
 Imports: birthday (Date)
 Exports: lucky_number (integer)
 
-Calculates lucky number.
+Calculates lucky number by calling creating Date object which will take day, month, year from keyboard input. Once calculated, the lucky number is output through return value.
 ```
 
 ```
@@ -22,7 +22,7 @@ Submodule get_lucky_animal
 Imports: lucky_number (integer)
 Exports: lucky_animal (string)
 
-Calculates lucky animal.
+Calculates lucky animal by receiving a lucky number as an argument and comparing it to a dictionary of lucky number to lucky animals. It outputs by returning the value. 
 ```
 
 ```
@@ -30,7 +30,7 @@ Submodule get_generation
 Imports: year (integer)
 Exports: generation (string)
 
-Calculates generation of a birthday.
+Calculates generation of a birthday by receiving year as an argument and comparing it to a set of conditions. It returns generation as output.
 ```
 
 ## Module logic
@@ -40,7 +40,7 @@ Submodule same_luck
 Imports: birthday1 (Date), birthday2 (Date)
 Exports: result (boolean)
 
-Checks if two dates have the same lucky number and lucky animal.
+Checks if two dates have the same lucky number and lucky animal by receiving birthday1 and birthday2 as arguments, then call calculate_lucky_number for each birthday and compare the results. It returns True if both have the same lucky number, and False if not.
 ```
 
 ```
@@ -48,7 +48,7 @@ Submodule is_master_number
 Imports: lucky_number (integer)
 Exports: result (boolean)
 
-Checks if a lucky number is a master number.
+Checks if a lucky number is a master number by receiving lucky number as argument and check if the number is in the list of master numbers of not. If it is in the list, return True. If it is not, return False.
 ```
 
 ## Module data_structures
@@ -57,19 +57,19 @@ Checks if a lucky number is a master number.
 Class Date
 Imports: None
 
-Stores day, month, year in integer format.
+Stores day, month, year in integer format. At constructor, call prompt_date and assign the return values of prompt_date to day, month, and year.
 
 Method prompt_date
 Imports: None
 Exports: day, month, year (integer)
 
-Prompts for user input for day, month, and year, validifies and calls format_month to format month
+Prompts for user input for day, month, and year, validifies if they are in correct formats and calls format_month to format month if month is not integer.
 
 Method format_month
 Imports: None
 Exports: month (integer)
 
-Formats month to integer
+Formats month to integer by using a dictionary that maps month strings to integers and return the integer. 
 ```
 
 # Modularity
