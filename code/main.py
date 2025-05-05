@@ -1,6 +1,6 @@
 import calculator
 import logic
-from data_structures import Date
+from date import Date
 
 if __name__ == "__main__":
     welcome_message = """

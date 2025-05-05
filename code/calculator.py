@@ -1,4 +1,4 @@
-from data_structures import Date
+from date import Date
 import logic
 
 def calculate_lucky_number(birthday):
