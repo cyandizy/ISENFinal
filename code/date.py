@@ -1,10 +1,20 @@
 class Date:
+    """
+        Stores day, month, year in integer format.
+    """
+
     def __init__(self):
         self.day = None
         self.month = None
         self.year = None
 
     def prompt_date(self):
+        """
+            Prompts for user input for day, month, and year, 
+            validifies if they are in correct formats and calls format_month to format month if month is not a digit. 
+            Finally, it modifies class members day, month, year with new values.
+        """
+
         day = input("Input day (integer)> ")
         month = input("Input month (integer or string)> ")
         year = input("Input year (string)> ")
@@ -28,6 +38,11 @@ class Date:
         self.year = year
 
     def format_month(self, month: str):
+        """
+            Formats month to integer by using a dictionary 
+            that maps month strings to integers and return the integer. 
+        """
+        
         month = month.lower()
         month_dict = {
             "january": 1, "february": 2, "march": 3, "april": 4, "may": 5, "june": 6,

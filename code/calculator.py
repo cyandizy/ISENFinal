@@ -2,6 +2,11 @@ from date import Date
 import logic
 
 def calculate_lucky_number(birthday):
+    """
+        Calculates lucky number by receiving birthday from argument. 
+        Once calculated, the lucky number is output through return value.
+    """
+
     date_string = str(birthday.day) + str(birthday.month) + str(birthday.year)
     lucky_number = 0
     for char in date_string:
@@ -15,6 +20,12 @@ def calculate_lucky_number(birthday):
     return lucky_number
 
 def get_lucky_animal(lucky_number):
+    """
+        Calculates lucky animal by receiving a lucky number as an argument 
+        and comparing it to a dictionary of lucky number to lucky animals. 
+        It outputs by returning the value. 
+    """
+
     lucky_animal_dict = {
         1: "Parrot",
         2: "Rabbit",
@@ -36,6 +47,11 @@ def get_lucky_animal(lucky_number):
 
 
 def get_generation(year):
+    """
+        Calculates generation of a birthday by receiving year as an argument 
+        and comparing it to a set of conditions. It returns generation as output.
+    """
+    
     generation = ""
     if year in range(1901, 1946):
         generation = "Silent Generation"
