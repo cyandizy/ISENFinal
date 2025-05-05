@@ -1,5 +1,5 @@
 import calculator
-from data_structures import Date
+from date import Date
 import unittest
 import io
 import sys
