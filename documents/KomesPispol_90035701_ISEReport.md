@@ -237,6 +237,7 @@ The result is that all test cases passed as expected.
 The debug processes can be seen in the Version Control section.
 
 # Traceability Matrix
+### Design | Implementation
 
 | Module name            | BB (EP) | BB (EVA) | WB  | Data types            | Form of IO                                                  | EP   | BVA  | WB  |
 | ---------------------- | ------- | -------- | --- | --------------------- | ----------------------------------------------------------- | ---- | ---- | --- |
