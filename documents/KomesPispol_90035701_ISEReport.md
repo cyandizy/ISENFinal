@@ -73,14 +73,29 @@ Formats month to integer
 ```
 
 # Modularity
-`A description on how to run your production code with correct commands.
+```A description on how to run your production code with correct commands.
 Sample output of running your production code. You must use screen shots to support your answer
 in this section.
 A brief explanation on how different modularity concepts is applied in your code.
 Your review checklist, results of reviewing your production code using the review checklist,
 with explanation on your results, and refactoring decisions.
 Revised module descriptions resulted after refactoring, if any (after doing the part 3 of the
-detailed description)`
+detailed description)```
+```
+
+### Instruction
+
+The code can be run by running `python3 main.py`. The user interface will appear, prompting to choose a scenario to run. 
+
+- Scenario A queries your birthday and outputs your generation, lucky number, animal, and check whether your lucky number is a master number or not.
+- Scenario B queries two birthdays and outputs whether they have the same lucky number and animal or not.
+- Scenario C queries your birthday and outputs the generation you belong to.
+
+If your scenario selection input is invalid, it will prompt until you enter a correct input.
+You need to rerun the code if you would like to try another scenario. 
+
+![[code_running_instructions.png]]
+
 # Black-box test cases
 ### Module calculator
 #### Submodule calculate_lucky_number
