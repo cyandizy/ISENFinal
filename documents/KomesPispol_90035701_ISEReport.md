@@ -1,11 +1,14 @@
 # Cover page
+
+
 ### Assignment
 #### By Komes Pispol 90035701
 #### Class Tuesday, 9:00 AM
 
 
 # Introduction
-`A brief overview of work you have done.`
+
+I have developed a tool specialized in birthday and numerology. This application is capable of calculating a lucky number from given date and a lucky number can be translated to its respective lucky animal. It is useful for telling fortune and whether two persons are compatible with the use of lucky number and animal. This tool is also able to identify which generation a person belong to by checking their birthday against generation map. It has  a command line interface that allows users to interact with the program easily. 
 # Module descriptions
 ## Module calculator
 
@@ -251,6 +254,10 @@ The debug processes can be seen in the Version Control section.
 # Version control
 `Log of the use of your version control system (image of the log is sufficient), any explanation/discussion on version control. (refer part 1 of the detailed description)`
 # Discussion
-`Reflect on your own work including summary of what you have achieved, challenges you have
+```
+Reflect on your own work including summary of what you have achieved, challenges you have
 faced, limitations and ways to improve your work with other features you have not considered, and
-any other information you wish to present.`
+any other information you wish to present.
+```
+
+I started this project by writing module descriptions in order to develop black box test cases first and foremost. With that, I have experienced test-driven development for the first time. It is convenience that each implementation can immediately be verified whether it is working as intended or not. However, the module design had been improving over time, leading to modification of test cases and documentation. This in turn led to multiple context switching, having to switch branches every few modifications, which is tedious for a solo development. 
