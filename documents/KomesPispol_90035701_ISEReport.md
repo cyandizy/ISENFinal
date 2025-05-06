@@ -185,7 +185,7 @@ Each module is designed with modularity in mind from the beginning to avoid too 
 | 5   | != 22                    | = 14                  | False                     |
 | 6   | != 33                    | = 43                  | False                     |
 
-### Module data_structures
+### Module date
 #### Class Date
 #### Method prompt_date
 ##### Equivalence Partitioning
