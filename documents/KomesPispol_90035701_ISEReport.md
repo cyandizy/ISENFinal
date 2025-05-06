@@ -79,6 +79,15 @@ Exports: month (integer)
 Formats month to integer by using a dictionary that maps month strings to integers and return the integer. 
 ```
 
+### Explanation
+
+I have designed so that each submodule satisfies each requirement without doing too many things at once in the same submodule. Each module only contains submodule with related functionalities for scalability.
+
+### Assumptions
+
+It is assumed that, in `get_generation()`, `year` is passed from a `Date()`object, meaning the input type is automatically validated. This means that in order to use    
+`get_generation()`, you need to create a `Date()`object and call `prompt_date()`to take in inputs.
+
 # Modularity
 ### Instructions
 
