@@ -100,8 +100,9 @@ The code can be run by running `python3 main.py`. The user interface will appear
 If your scenario selection input is invalid, it will prompt until you enter a correct input.
 You need to rerun the code if you would like to try another scenario. 
 
-![[code_running_instructions.png]]
-
+![[code_running_instructions_1.png]]
+![[code_running_instructions_2.png]]
+![[code_running_instructions_3.png]]
 ### Modularity Checklist
 | No. | Question                        | Yes/No | Where |
 | --- | ------------------------------- | ------ | ----- |
