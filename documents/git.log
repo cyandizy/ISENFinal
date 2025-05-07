@@ -1,0 +1,616 @@
+* commit 8957ac51fd3cfeab4f5b5b5aa892049a05f63c44
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Wed May 7 11:24:51 2025 +0800
+| 
+|     Fix: some spacings in report
+| 
+* commit 26a41dfbc2d62c76010ef9ff6e79b22de626cbc9
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Wed May 7 11:20:47 2025 +0800
+| 
+|     Refactor: edited formatting, replaced unittest image with latest, and correct spellings
+| 
+* commit 862e3032227d73299731df9528fd84706d801806
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Wed May 7 11:04:01 2025 +0800
+| 
+|     Fix: report whitebox fixed expected output on prompt_date path 4
+| 
+* commit a2a86b203336dd8140d46412c61e4a6644c39fa6
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Wed May 7 11:02:59 2025 +0800
+| 
+|     Add: test_whitebox
+| 
+* commit 4bbb51ea7efb0d8234bb044f1755684508b78792
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Wed May 7 10:53:27 2025 +0800
+| 
+|     Chore: fixed newline formatting in report
+| 
+* commit bcd95c6a79fdb7cb46eb6c6406e566349b152545
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Wed May 7 10:52:40 2025 +0800
+| 
+|     Update: report, added white box test cases
+| 
+* commit 04096f23c8447a6ff34ec95592e3e864a3e2f751
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Tue May 6 12:54:43 2025 +0800
+| 
+|     Update: report discussion section
+| 
+* commit 72dd4a8fc85aa6238b8fdb723677b275d660f0d4
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Tue May 6 12:33:14 2025 +0800
+| 
+|     Chore: changed an unchanged date module name
+| 
+* commit 7895de4e4cf7e018388c23e1c165a9a5dabde456
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Tue May 6 12:31:46 2025 +0800
+| 
+|     Update: added new images for code running instructions
+| 
+* commit 2a3808484b9c7170053a90fc783891e285000cea
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Tue May 6 12:22:39 2025 +0800
+| 
+|     Update: included explanation and assumption in module description section
+| 
+* commit 52ab45b06811c2df7555ab2381b67c38e9e6b514
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Tue May 6 09:07:53 2025 +0800
+| 
+|     Update: report expanded discussion part
+|   
+*   commit ed6c088c5bfb1a4eba59c1a32da8b2c1e0653a35
+|\  Merge: 3cabfc9 c4ccec5
+| | Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| | Date:   Mon May 5 19:15:02 2025 +0800
+| | 
+| |     Merge branch 'design' into implementation
+| | 
+| * commit c4ccec574fc8a607c5c41c4256185465eb393ba3
+| | Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| | Date:   Mon May 5 19:11:05 2025 +0800
+| | 
+| |     Update: made traceability matrix more comprehensible
+| | 
+| * commit eb59a95e3372a819496394388b4849a3e9e26056
+| | Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| | Date:   Mon May 5 19:04:56 2025 +0800
+| | 
+| |     Update: report expanded Modularity section
+| | 
+* | commit 3cabfc9209fdfc0abd3f6fb5e3605af129c34cc4
+|/  Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+|   Date:   Mon May 5 19:14:55 2025 +0800
+|   
+|       Update: added docstring to each submodule
+| 
+* commit 93db97ff13dd7e1a1bb570bd8a9c85e980789193
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Mon May 5 18:45:10 2025 +0800
+| 
+|     Refactor: applied data_structures module name change
+| 
+* commit e3d00c2fd87d886fb0cbfefc9c8020c974f15689
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Mon May 5 18:44:00 2025 +0800
+| 
+|     Refactor: changed module name data_structures to date
+| 
+* commit c97fbfdfe6cd659ed40d91a8cc6b6084be39086a
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Mon May 5 18:42:36 2025 +0800
+| 
+|     Refactor: changed module name data_structures to date and applied refactors from implementation
+| 
+* commit 937c079b2c7e93fbdb6cdb413849fdc9a84ba39e
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Mon May 5 18:34:48 2025 +0800
+| 
+|     Refactor: changed keyboard simulation method from patch to io + sys
+|   
+*   commit 6803998d612a3927d3fa3ab9c91977d59427e7ae
+|\  Merge: b92184c cd89b61
+| | Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| | Date:   Mon May 5 18:19:47 2025 +0800
+| | 
+| |     Merge branches 'implementation' and 'design' into testing so that test
+| |     cases can be adjusted to accommodate refactored design
+| | 
+| * commit cd89b6151fc972f7090cbd3543dd2e4e6a12e85a
+| | Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| | Date:   Mon May 5 15:20:48 2025 +0800
+| | 
+| |     Update: report module description, described what each submodule does in detail.
+| | 
+| * commit 40e99b371dbcf7acdfb90bea5ab9286abf997939
+| | Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| | Date:   Mon May 5 14:45:50 2025 +0800
+| | 
+| |     Update: changed some test cases to use last name and last four digits of student id
+| | 
+| * commit 3d0df027a1d6e7635c02c1d30cefa4873d4e24ce
+| | Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| | Date:   Mon May 5 14:08:05 2025 +0800
+| | 
+| |     Update: report Modularity added instructions for running code correctly
+| | 
+* | commit b92184c6f409264317c2619bba7529cc5049c116
+|/  Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+|   Date:   Mon May 5 18:18:42 2025 +0800
+|   
+|       Refactor: Date to not call prompt_date() at initialization and let frontend handle that instead
+| 
+* commit 1a30ffae2fa5627d096e73350fd9076024d4111f
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Sat May 3 17:06:36 2025 +0800
+| 
+|     Add: implemented main.py
+| 
+* commit b3aa80a834c8355883524e67fafe9a01af7f24df
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Sat May 3 16:58:29 2025 +0800
+| 
+|     Update: changed test same_luck to accomodate keyboard input testing
+| 
+* commit b0fc3ff59d53da06ce5471ad937a54dbd8230f3d
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Sat May 3 16:55:37 2025 +0800
+| 
+|     Update: enable lucky_number to take parameter
+| 
+* commit 65667c527c41ed67e57163e0f5a45055c16cf285
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Sat May 3 16:53:22 2025 +0800
+| 
+|     Update: test_same_luck to test keyboard input
+| 
+* commit c03811fec33772e99b2e9ffd0f3c01eddd3be2ee
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Sat May 3 16:40:49 2025 +0800
+| 
+|     Update: changed same_luck to handle keyboard input instead of parameter
+| 
+* commit 55939575993827d0681babcbfaac39cc5d09d258
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Sat May 3 16:35:46 2025 +0800
+| 
+|     Update: test cases that rely on Date to test by simulating keyboard input
+| 
+* commit 0910afc8259a695f9866e19f6e8445d3f93ac9b1
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Sat May 3 16:29:57 2025 +0800
+| 
+|     Update: lucky number to take keyboard input instead
+| 
+* commit 0c4251cf680a1b0dad16cd1ba190a2697f798365
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Sat May 3 16:28:15 2025 +0800
+| 
+|     Update: to take keyboard input instead
+|   
+*   commit 98c7848237aa0e4a115f4e27345af59bdbbcf79c
+|\  Merge: d98629b 39a439b
+| | Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| | Date:   Sat May 3 16:15:30 2025 +0800
+| | 
+| |     Merge branch 'design' into implementation
+| | 
+| * commit 39a439b00810abd30e4a354e8b5490741b721b58
+| | Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| | Date:   Sat May 3 16:08:55 2025 +0800
+| | 
+| |     Update: changed prompt_date and calculate_lucky_number's input method to keyboard input
+| | 
+* | commit d98629ba13c735c671645cd9f77e32c469821761
+|/  Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+|   Date:   Sat May 3 16:14:48 2025 +0800
+|   
+|       Update: test for lucky number to test keyboard input instead
+| 
+* commit f28c6946f582f1ee2665703656ed2c0c4b33bccb
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Sat May 3 15:57:43 2025 +0800
+| 
+|     Update: changed test_constructor to test_prompt_date and test using keyboard input simulation
+| 
+* commit 7059224cf708940ee0cb0b20cb7522897ed74801
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Sat May 3 15:48:32 2025 +0800
+| 
+|     Refactor: constructor test case and module is now a separate method called prompt_date
+| 
+* commit 464b44640e7fd4c035358f21f794f42592eefe8b
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Sat May 3 15:42:02 2025 +0800
+| 
+|     Fix: prompt_date not converting input to int before constructing Date
+| 
+* commit febf5fa087450712aca3117cdabf81aa4e09a140
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Sat May 3 15:31:31 2025 +0800
+| 
+|     Add: implemented main
+| 
+* commit 2fae4d6644b2a78dda86f47ca7bb80267156ab51
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Sat May 3 11:23:25 2025 +0800
+| 
+|     Update: report test implementation and test execution section, and added screenshot
+| 
+* commit b1f9cd56d93709e31af6f8ea7e30bb597d6328b0
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Sat May 3 11:02:55 2025 +0800
+| 
+|     Update: implemented BVA for test_get_generation
+| 
+* commit 7dec5655d9434ddee3364f59c962d7a8abeeee6f
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Sat May 3 10:54:29 2025 +0800
+| 
+|     Update: updated traceability matrix according to tasks fulfilled
+| 
+* commit 0c889da928bf1eb10ee9ec4fa5c92b4710af4a7b
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Sat May 3 10:52:04 2025 +0800
+| 
+|     Update: added BVA for get_generation
+| 
+* commit 709f64b9e8a737f1fba001d9411fb5b76d426831
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Sat May 3 10:44:25 2025 +0800
+| 
+|     Refactor: design, reformatted blackbox testing for each module
+| 
+* commit c6478d1d396baece037de788b1d9fe54b70154f8
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Sat May 3 10:41:45 2025 +0800
+| 
+|     Add: design, traceability matrix
+| 
+* commit e2cd714b9f13b3aa71996b1b57e1cd6d7de11623
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Fri May 2 15:50:21 2025 +0800
+| 
+|     Update: constructor valid test cases to expect (day, month, year) instead of None
+| 
+* commit 8f946b8f3d1fff4c6963b025bf8780b6df220c8b
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Fri May 2 15:46:27 2025 +0800
+| 
+|     Fix: format month called before turning month into integer
+| 
+* commit 9c90569f90bf636a9a79756563cebf9184b52db9
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Fri May 2 15:42:54 2025 +0800
+| 
+|     Fix: test constructor to compare expected and actual value properly
+| 
+* commit 3af002de44c04665ec68d3bc93d18f01f0794b9a
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Fri May 2 15:23:44 2025 +0800
+| 
+|     Fix: test data structure to handle exceptions
+| 
+* commit 496cc0b8362b298a45e757fec6bf9b9580c38f6f
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Fri May 2 15:19:46 2025 +0800
+| 
+|     Fix: format month to handle keyerror
+| 
+* commit 21c819900d152b02df5a558ca69a819eac6c9eea
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Fri May 2 15:10:37 2025 +0800
+| 
+|     Fix: to call format_month from test_date
+| 
+* commit 72108e516dfe9eabcabc7e1c9d478a47224d67e0
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Fri May 2 15:07:34 2025 +0800
+| 
+|     Fix: called is_instance incorrectly
+| 
+* commit f9a236c6327ad5eb685ce344c8665ea7709f2f7b
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Fri May 2 12:29:40 2025 +0800
+| 
+|     Chore: removed pycache from tracking
+| 
+* commit 4cf6b9fcf5f62d7db9ca514db3be92b03e333b23
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Fri May 2 12:26:24 2025 +0800
+| 
+|     Update: gitignore to ignore .pyc
+| 
+* commit 08cfb588551cd7cf847924012b2de0aecd23cf8a
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Fri May 2 12:23:46 2025 +0800
+| 
+|     Update: gitignore to ignore pycache
+| 
+* commit 45b777821346a2118734ac567b40e6c8b40888ef
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Fri May 2 12:21:01 2025 +0800
+| 
+|     Update: implemented additional test cases for test_data_structure
+| 
+* commit dfc81341fc9aa4ce3b25b82940fb83d373392c29
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Fri May 2 11:58:50 2025 +0800
+| 
+|     Update: design, added more test cases for format_month
+| 
+* commit 0a518770ee40bc0074a2558c72eeff7edbcc110d
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Fri May 2 11:54:55 2025 +0800
+| 
+|     Update: design, formatted date constructor test cases
+| 
+* commit d996328616db14fdfe3c187090891caddd35640e
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Fri May 2 11:48:58 2025 +0800
+| 
+|     Add: implemented test date constructor
+| 
+* commit b932a4c08125895e7cfd9dffc84f8f0945d18a0b
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Fri May 2 11:48:26 2025 +0800
+| 
+|     Update: test case for calculate_lucky_number to handle master number and not master number
+| 
+* commit c2959acdf20ab10c3e3a8165848404117ecb7fe8
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Fri May 2 11:32:41 2025 +0800
+| 
+|     Update: design (report) submodule calculate_lucky_number updated to have proper cases and fixed expected outputs
+| 
+* commit 1913bf51e8f8033394b024e5408f14a6c0f5f81e
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Fri May 2 11:28:41 2025 +0800
+| 
+|     Update: design (report) added test case for Date constructor
+| 
+* commit 8cecd025ed33f111a9a7ebe93bd80518262b1565
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Fri May 2 11:20:59 2025 +0800
+| 
+|     Update: reverted tuples imports to date
+| 
+* commit 9d04a865afc5ee80de73600e37f0d9aa7397a1e7
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Fri May 2 11:10:45 2025 +0800
+| 
+|     Add: Implemented format_month
+| 
+* commit c5e5ca8a9ba4ed274a648697630241223bcd27e7
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Fri May 2 11:05:25 2025 +0800
+| 
+|     Add: implemented test case for format_month
+| 
+* commit 57ecc69c1be0fe286a7517813c4fd5334bba6407
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Fri May 2 10:59:37 2025 +0800
+| 
+|     Update: report add test case for class date, format month method
+| 
+* commit ab355c34ec9e124092bdac5ee60337746a56e179
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Fri May 2 10:47:32 2025 +0800
+| 
+|     Update: report replaced submodule imports that are Date with tuble
+| 
+* commit 2086e2e608f1e54c4550b5415c5cf81923347fe9
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Fri May 2 10:41:11 2025 +0800
+| 
+|     Update: made Date able to take month as string and updated related submodules
+| 
+* commit 6327e1c81c45de8ccdc3c555ea65a4b180138f6a
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Fri May 2 10:34:32 2025 +0800
+| 
+|     Chore: fixed indentation for files
+| 
+* commit 33064cd07178c3c17a0a9ede32ccdac1bcb74a57
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Thu May 1 15:44:15 2025 +0800
+| 
+|     Update: changed test_calculate_lucky_number to handle exceptions better
+| 
+* commit 742ba25dc8c64a60f7461576d86b539e3bf80a6e
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Thu May 1 15:37:57 2025 +0800
+| 
+|     Refactor: ValueError in calculate_lucky_number is now raised in Date class
+| 
+* commit 8d1ea0aaa0d5574ae1814c191f2b41bcd7e4c923
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Thu May 1 11:36:24 2025 +0800
+| 
+|     Fix: calculate lucky number to not include error message in invalid cases
+| 
+* commit 51c7decfa335fbd317580ee33c60c57304dd0b66
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Thu May 1 11:33:45 2025 +0800
+| 
+|     Fix: calculate_lucky_number to handle invalid date
+| 
+* commit 1b1e63b710d396d53e5017918c0668f19af718f5
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Thu May 1 11:16:58 2025 +0800
+| 
+|     Fix: test cases for is_master_number and calculate_lucky_number
+| 
+* commit a31d9fc84c91f13d3777443c1f708ba44fd85026
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Thu May 1 11:12:42 2025 +0800
+| 
+|     Add: implemented get_generation
+| 
+* commit 563c454f5d93a2300880f9033c789e45e34464a6
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Thu May 1 11:07:46 2025 +0800
+| 
+|     Add: implemented get_lucky_animal
+| 
+* commit 408a32dbccab30942a8883d823015d14f6914caf
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Thu May 1 10:55:17 2025 +0800
+| 
+|     Add: implemented calculate_lucky_number
+| 
+* commit 487a38105d86ee25068b786403682815995d3b34
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Thu May 1 09:06:53 2025 +0800
+| 
+|     Update: implemented all submodules for logic module
+| 
+* commit e5683d93f6d8aa35b123bb712a9efefb3ef14baa
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Thu May 1 09:00:12 2025 +0800
+| 
+|     Add: placeholder functions for calculator and logic modules
+| 
+* commit 7200c088ae04e83ca44caad4ccbf7a5c8a92ad3a
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Thu May 1 08:56:19 2025 +0800
+| 
+|     Refactor: made all test case messages of test calculator module more comprehensible
+| 
+* commit 3d52b460499694c73e40b93259c4b1cd75442e4c
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Thu May 1 08:54:22 2025 +0800
+| 
+|     Add: test code for same_luck and is_master_number
+|   
+*   commit 1e692ac04cf40f000fbff75fc7b29e103c5ac921
+|\  Merge: 06e161b abc68fe
+| | Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| | Date:   Thu May 1 08:43:37 2025 +0800
+| | 
+| |     Merge branch 'design' into testing to apply the new design.
+| | 
+| * commit abc68fede035ea73e30c5613ceda02bee2df77a0
+| | Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| | Date:   Thu May 1 08:43:14 2025 +0800
+| | 
+| |     Refactor: moved is_master_number to module logic instead of calculator
+| | 
+* | commit 06e161b7e827b547a3c351646d0c1d69dc1f7cde
+| | Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| | Date:   Thu May 1 08:41:07 2025 +0800
+| | 
+| |     Add: test code for get_generation
+| | 
+* | commit e7e2f3d2296c2a47f0d685bf9e700d147e8860b9
+| | Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| | Date:   Thu May 1 08:38:13 2025 +0800
+| | 
+| |     Add: test code for get_lucky_animal
+| | 
+* | commit a9ec886cc5c1903a6c19ee99e63d3616c23e7b99
+| | Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| | Date:   Wed Apr 30 19:43:03 2025 +0800
+| | 
+| |     Add: test_calculator, added test case for calculate_lucky_number
+| | 
+* | commit 5cf995246f1d79a68827ea0f3c35b83c5fb11cbd
+|/  Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+|   Date:   Wed Apr 30 19:26:41 2025 +0800
+|   
+|       Add: implemented data_structure.py
+| 
+* commit 3b7496a4cf8aba8c389984cb65812c19e6cc3bbf
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Wed Apr 30 18:59:06 2025 +0800
+| 
+|     Update: gitignore added .zip
+| 
+* commit 9e802c084b69142f419080c4a6816b58e5f3a896
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Wed Apr 30 16:36:10 2025 +0800
+| 
+|     Update: added placeholder for Cover page, introduction, modularity, white box, summary, version control, and discussion
+| 
+* commit 63d745a062f757dc687222c31e655bf2ebf03d9e
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Wed Apr 30 16:27:28 2025 +0800
+| 
+|     Update: report black box added submodule same_luck
+| 
+* commit 2e10393e5ee24dadb3de937329fd798467978f92
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Wed Apr 30 16:15:52 2025 +0800
+| 
+|     Refactor: report changed variable names for submodule get_generation in module desc
+| 
+* commit 3c04d5f1729e4eb85aaaf260ac21a9f1d89d986d
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Wed Apr 30 16:14:03 2025 +0800
+| 
+|     Update: report black box section added get_lucky_animal and get_generation submodules
+| 
+* commit bbf14eb1e059d3ec55423935edb0cf2d3ecb25e0
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Tue Apr 29 09:07:12 2025 +0800
+| 
+|     Refactor: report formatted modules into code blocks
+| 
+* commit 77dd50f4e7010568e961323dfc38a63154cf73da
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Mon Apr 28 16:45:48 2025 +0800
+| 
+|     Update: report add black box test case for calculate_lucky_number
+| 
+* commit 6764061d804c51585eb0dedfd554e8bb948c0eaf
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Mon Apr 28 16:25:45 2025 +0800
+| 
+|     Update: report add black box test case for is_master_number
+| 
+* commit 2d44177f0e9e105100f3f1565598a768f52b647c
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Mon Apr 28 16:09:12 2025 +0800
+| 
+|     Update: report submodule get_generation now exports string instead of boolean
+| 
+* commit cba1745ca7a33e087ed0632b96a356f28949df1b
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Mon Apr 28 15:58:51 2025 +0800
+| 
+|     Update: report, renamed module analyzer to logic and added module data_structures containing class Date
+| 
+* commit 46fc36b1bc28dedcdbd3c464d1ec7028b95cd43d
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Sat Apr 26 15:47:02 2025 +0800
+| 
+|     Update: report module section added module calculator and module analyzer
+| 
+* commit 5cf61fc8286919bdf975b15932ad0e71e9d4f217
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Sat Apr 26 15:40:45 2025 +0800
+| 
+|     Update: report add sections
+| 
+* commit daf3db3df0ffdddceeb32b51c408b1a0b0073c01
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Sat Apr 26 15:40:09 2025 +0800
+| 
+|     Add: gitignore for .obsidian
+| 
+* commit 4decfde75b9829ebd8c65a5106234e9c127b3192
+| Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+| Date:   Sat Apr 26 15:13:50 2025 +0800
+| 
+|     Add: initialized report markdown
+| 
+* commit a73641b8a57815632d591ef15502419e850b64dd
+  Author: Komes Pispol <90035701@study.curtincollege.edu.au>
+  Date:   Sat Apr 26 15:08:39 2025 +0800
+  
+      Initial commit
