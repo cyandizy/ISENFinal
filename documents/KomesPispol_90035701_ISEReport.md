@@ -86,8 +86,8 @@ I have designed so that each submodule satisfies each requirement without doing 
 
 ### Assumptions
 
-It is assumed that, in `get_generation()`, `year` is passed from a `Date()`object, meaning the input type is automatically validated. This means that in order to use    
-`get_generation()`, you need to create a `Date()`object and call `prompt_date()`to take in inputs.
+It is assumed that, in `get_generation()`, `year` is passed from a `Date()` object, meaning the input type is automatically validated. This means that in order to use    
+`get_generation()`, you need to create a `Date()`object and call `prompt_date()` to take in inputs.
 
 # Modularity
 ### Instructions
@@ -118,7 +118,7 @@ You need to rerun the code if you would like to try another scenario.
 | 6   | Duplication                     | No     |       |
 | 7   | Supersets                       | No     |       |
 
-In the code shows that each submodule only does what it is meant to do, which shows separation of concern. However, a submodule can also call other modules to help complete its task to avoid Redundancy when two submodule has a similar sub-task. For example, `calculate_lucky_number()` makes use `is_master_number()` as a part of its calculation while `is_master_number()`can also be used elsewhere, which is user interface in this case.
+In the code shows that each submodule only does what it is meant to do, which shows separation of concern. However, a submodule can also call other modules to help complete its task to avoid Redundancy when two submodule has a similar sub-task. For example, `calculate_lucky_number()` makes use `is_master_number()` as a part of its calculation while `is_master_number()` can also be used elsewhere, which is user interface in this case.
 Each module is designed with modularity in mind from the beginning to avoid too many refactoring.
 
 # Black-box test cases
@@ -207,7 +207,7 @@ Each module is designed with modularity in mind from the beginning to avoid too 
 | No. | Category<br>                    | Input<br>month | Expected Output<br>month |
 | --- | ------------------------------- | -------------- | ------------------------ |
 | 1   | January                         | = "January"    | 1                        |
-| 2   | Febuary                         | = "Febuary"    | 2                        |
+| 2   | February                        | = "February"   | 2                        |
 | 3   | March                           | = "March"      | 3                        |
 | 4   | April                           | = "April"      | 4                        |
 | 5   | May                             | = "May"        | 5                        |
@@ -256,12 +256,17 @@ Each module is designed with modularity in mind from the beginning to avoid too 
 
 
 # Test implementation and test execution
-I have implemented test cases for each submodule in Black-Box Test Cases section. Most of test cases are in form of Equivalence Partitioning. One test case is in form of Boundary Value Analysis, which is submodule get_generation, which I deemed appropriate.
+
+I have implemented test cases for each submodule in Black-Box Test Cases section. Most of test cases are in form of Equivalence Partitioning. One test case is in form of Boundary Value Analysis, which is submodule `get_generation()`, which I deemed appropriate.
+
+As for White-Box testing, I have chosen `calculate_lucky_number()` and `prompt_date()`
+as their paths affect their processes.
 
 All test cases can be executed as follows,
 ```
 python3 -m unittest
 ```
+Note that this command needs to be executed inside `code/` directory
 
 The result is that all test cases passed as expected.
 ![[unittest_passed.png]]
@@ -270,26 +275,21 @@ The debug processes can be seen in the Version Control section.
 # Traceability Matrix
 ### Design | Implementation
 
-| Module name            | BB (EP) | BB (EVA) | WB  | Data types            | Form of IO                                                  | EP   | BVA  | WB  |
-| ---------------------- | ------- | -------- | --- | --------------------- | ----------------------------------------------------------- | ---- | ---- | --- |
-| calculate_lucky_number | Done    | -        |     | Date -> integer       | Input: <br>Parameter<br>Output:<br>Return                   | Done | -    |     |
-| get_lucky_animal       | Done    | -        |     | integer -> string     | Input: <br>Parameter<br>Output:<br>Return                   | Done | -    |     |
-| get_generation         | Done    | Done     |     | integer -> string     | Input: <br>Parameter<br>Output:<br>Return                   | Done | Done |     |
-| same_luck              | Done    | -        |     | Date -> boolean       | Input: <br>Parameter<br>Output:<br>Return                   | Done | -    |     |
-| is_master_number       | Done    | -        |     | integer -> boolean    | Input: <br>Parameter<br>Output:<br>Return                   | Done | -    |     |
-| prompt_date            | Done    | -        |     | string<br>-> Date     | Input: <br>Keyboard<br>Output:<br>Class member modification | Done | -    |     |
-| format_month           | Done    | -        |     | string <br>-> integer | Input: <br>Parameter<br>Output:<br>Return                   | Done | -    |     |
+| Module name            | BB (EP) | BB (BVA) | WB   | Data types            | Form of IO                                                  | EP   | BVA  | WB   |
+| ---------------------- | ------- | -------- | ---- | --------------------- | ----------------------------------------------------------- | ---- | ---- | ---- |
+| calculate_lucky_number | Done    | -        | Done | Date -> integer       | Input: <br>Parameter<br>Output:<br>Return                   | Done | -    | Done |
+| get_lucky_animal       | Done    | -        | -    | integer -> string     | Input: <br>Parameter<br>Output:<br>Return                   | Done | -    | -    |
+| get_generation         | Done    | Done     | -    | integer -> string     | Input: <br>Parameter<br>Output:<br>Return                   | Done | Done | -    |
+| same_luck              | Done    | -        | -    | Date -> boolean       | Input: <br>Parameter<br>Output:<br>Return                   | Done | -    | -    |
+| is_master_number       | Done    | -        | -    | integer -> boolean    | Input: <br>Parameter<br>Output:<br>Return                   | Done | -    | -    |
+| prompt_date            | Done    | -        | Done | string<br>-> Date     | Input: <br>Keyboard<br>Output:<br>Class member modification | Done | -    | Done |
+| format_month           | Done    | -        | -    | string <br>-> integer | Input: <br>Parameter<br>Output:<br>Return                   | Done | -    | -    |
 # Version control
 `Log of the use of your version control system (image of the log is sufficient), any explanation/discussion on version control. (refer part 1 of the detailed description)`
 # Discussion
-```
-Reflect on your own work including summary of what you have achieved, challenges you have
-faced, limitations and ways to improve your work with other features you have not considered, and
-any other information you wish to present.
-```
 
-I started this project by writing module descriptions in order to develop black box test cases first and foremost. With that, I have experienced test-driven development for the first time. It is convenience that each implementation can immediately be verified whether it is working as intended or not. However, the module design had been improving over time, leading to modification of test cases and documentation. This in turn led to multiple context switching, having to switch branches every few modifications, which is tedious for a solo development. 
+I started this project by writing module descriptions in order to develop black box test cases first and foremost. With that, I have experienced test-driven development for the first time. It is convenience that each implementation can immediately be verified whether it is working as intended or not, using Black-Box test cases. However, the module design had improved over time, leading to modification of test cases and documentation. This in turn led to multiple context switching, having to switch branches every few modifications, which is tedious for a solo development. 
 
-I believe that my work flow would be better if I had understood every requirement at the beginning. There were times that I would misunderstand a requirement halfway and had to rewrite every part, including report, test code, and production code. Some changes led to chain reactions that I had to apply the change I made on one submodule and a few other modules. But ultimately, I had to change the code back when I had finally understood the requirement because I couldn't use `git reset`when I have already made new features over the misunderstood changes. This taught me that branches should not be defined from start but should be created as I need, so that `git reset`can actually be useful. 
+I believe that my work flow would be better if I had understood every requirement at the beginning. There were times that I would misunderstand a requirement halfway and had to rewrite every part, including report, test code, and production code. Some changes led to chain reactions that I had to apply the change I made on one submodule and a few other modules. But ultimately, I had to change the code back when I had finally understood the requirement because I couldn't use `git reset` when I have already made new features over the misunderstood changes. This taught me that branches should not be defined from start but should be created as I need, so that `git reset` can actually be useful. 
 
 In the end, this assignment effectively taught me how to use git version control effectively, how to use merge, and when to branch.
