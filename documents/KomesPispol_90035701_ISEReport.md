@@ -244,7 +244,6 @@ Each module is designed with modularity in mind from the beginning to avoid too 
 
 ### Module date
 #### Method prompt_date
-
 | No. | Path<br>                                       | Test Data                                   | Expected Output |
 | --- | ---------------------------------------------- | ------------------------------------------- | --------------- |
 | 1   | Enter first if, do not enter second if         | day = 10<br>month = "march" <br>year = 2006 | (10, 3, 2006)   |
@@ -254,6 +253,7 @@ Each module is designed with modularity in mind from the beginning to avoid too 
 | 5   | Enter else of 1st if, enter 2nd if             | day = -1<br>month = 4<br>year = 2024        | ValueError      |
 | 6   | Enter else of 1st if, enter 1st else of 2nd if | day = 4<br>month = 99<br>year = 1945        | ValueError      |
 | 7   | Enter else of 1st if, enter 2nd else of 2nd if | day = 9<br>month = 12<br>year = 2174        | ValueError      |
+
 
 # Test implementation and test execution
 I have implemented test cases for each submodule in Black-Box Test Cases section. Most of test cases are in form of Equivalence Partitioning. One test case is in form of Boundary Value Analysis, which is submodule get_generation, which I deemed appropriate.
