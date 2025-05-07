@@ -9,6 +9,7 @@
 # Introduction
 
 I have developed a tool specialized in birthday and numerology. This application is capable of calculating a lucky number from given date and a lucky number can be translated to its respective lucky animal. It is useful for telling fortune and whether two persons are compatible with the use of lucky number and animal. This tool is also able to identify which generation a person belong to by checking their birthday against generation map. It has  a command line interface that allows users to interact with the program easily. 
+
 # Module descriptions
 ## Module calculator
 
@@ -234,9 +235,26 @@ Each module is designed with modularity in mind from the beginning to avoid too 
 | 27  | String does not match any month | = "Jupiter"    | ValueError               |
 
 # White-box test cases
-`All test cases you have designed as the answer for part 5 of this assessment, produced in the
-tubular format shown in lecture 10, brief explanation on your test design, and any
-assumptions you made.`
+### Module calculator
+#### Submodule calculate_lucky_number
+| No. | Path            | Test Data                    | Expected Output   |
+| --- | --------------- | ---------------------------- | ----------------- |
+| 1.  | Do not enter if | birthday = Date(10, 3, 2006) | lucky_number = 3  |
+| 2.  | Enter if        | birthday = Date(6, 6, 2017)  | lucky_number = 22 |
+
+### Module date
+#### Method prompt_date
+
+| No. | Path<br>                                       | Test Data                                   | Expected Output |
+| --- | ---------------------------------------------- | ------------------------------------------- | --------------- |
+| 1   | Enter first if, do not enter second if         | day = 10<br>month = "march" <br>year = 2006 | (10, 3, 2006)   |
+| 2   | Enter first if, enter second if                | day = 44<br>month = "april"<br>year = 2006  | ValueError      |
+| 3   | Enter 1st if, enter 2nd else of 2nd if         | day = 14<br>month = "may"<br>year = 200     | ValueError      |
+| 4   | Enter else of 1st if, do not enter second if   | day = 12<br>month = 9<br>year = 2004        | ValueError      |
+| 5   | Enter else of 1st if, enter 2nd if             | day = -1<br>month = 4<br>year = 2024        | ValueError      |
+| 6   | Enter else of 1st if, enter 1st else of 2nd if | day = 4<br>month = 99<br>year = 1945        | ValueError      |
+| 7   | Enter else of 1st if, enter 2nd else of 2nd if | day = 9<br>month = 12<br>year = 2174        | ValueError      |
+
 # Test implementation and test execution
 I have implemented test cases for each submodule in Black-Box Test Cases section. Most of test cases are in form of Equivalence Partitioning. One test case is in form of Boundary Value Analysis, which is submodule get_generation, which I deemed appropriate.
 
