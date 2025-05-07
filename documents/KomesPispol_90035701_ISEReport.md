@@ -249,7 +249,7 @@ Each module is designed with modularity in mind from the beginning to avoid too 
 | 1   | Enter first if, do not enter second if         | day = 10<br>month = "march" <br>year = 2006 | (10, 3, 2006)   |
 | 2   | Enter first if, enter second if                | day = 44<br>month = "april"<br>year = 2006  | ValueError      |
 | 3   | Enter 1st if, enter 2nd else of 2nd if         | day = 14<br>month = "may"<br>year = 200     | ValueError      |
-| 4   | Enter else of 1st if, do not enter second if   | day = 12<br>month = 9<br>year = 2004        | ValueError      |
+| 4   | Enter else of 1st if, do not enter second if   | day = 12<br>month = 9<br>year = 2004        | (12, 9, 2004)   |
 | 5   | Enter else of 1st if, enter 2nd if             | day = -1<br>month = 4<br>year = 2024        | ValueError      |
 | 6   | Enter else of 1st if, enter 1st else of 2nd if | day = 4<br>month = 99<br>year = 1945        | ValueError      |
 | 7   | Enter else of 1st if, enter 2nd else of 2nd if | day = 9<br>month = 12<br>year = 2174        | ValueError      |
