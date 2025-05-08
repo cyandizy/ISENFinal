@@ -37,7 +37,7 @@ class Date:
         self.month = month
         self.year = year
 
-    def format_month(self, month: str):
+    def format_month(self, month):
         """
             Formats month to integer by using a dictionary 
             that maps month strings to integers and return the integer. 
