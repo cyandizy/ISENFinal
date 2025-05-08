@@ -16,9 +16,13 @@ class TestWhitebox(unittest.TestCase):
             "Path: Enter if"]
     
         for i in range(len(expected)):
+            stdin_reset = sys.stdin
+
             sys.stdin = io.StringIO(f"{birthday[i][0]}\n{birthday[i][1]}\n{birthday[i][2]}")
             date = Date()
             date.prompt_date()
+            sys.stdin = stdin_reset
+
             self.assertEqual(expected[i], calculator.calculate_lucky_number(date), msg[i])
     
     def test_prompt_date(self):
@@ -53,13 +57,20 @@ class TestWhitebox(unittest.TestCase):
         for i in range(len(expected)):
             if expected[i] == ValueError:
                 with self.assertRaises(ValueError, msg=msg[i]):
+                    stdin_reset = sys.stdin
+                    
                     sys.stdin = io.StringIO(f"{date[i][0]}\n{date[i][1]}\n{date[i][2]}")
                     test_date = Date()
                     test_date.prompt_date()
-            else:      
+                    sys.stdin = stdin_reset
+            else:
+                stdin_reset = sys.stdin
+                
                 sys.stdin = io.StringIO(f"{date[i][0]}\n{date[i][1]}\n{date[i][2]}")
                 test_date = Date()     
-                test_date.prompt_date()         
+                test_date.prompt_date() 
+                sys.stdin = stdin_reset
+
                 self.assertEqual(expected[i][0], test_date.day, msg[i])
                 self.assertEqual(expected[i][1], test_date.month, msg[i])
                 self.assertEqual(expected[i][2], test_date.year, msg[i])

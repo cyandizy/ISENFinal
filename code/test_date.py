@@ -42,21 +42,27 @@ class TestDate(unittest.TestCase):
         for i in range(len(expected)):
             if expected[i] == ValueError:
                 with self.assertRaises(ValueError, msg=msg[i]):
+                    stdin_reset = sys.stdin
                     sys.stdin = io.StringIO(f"{dates[i][0]}\n{dates[i][1]}\n{dates[i][2]}")
                     test_date = Date()
                     test_date.prompt_date()
-            else:      
+                    sys.stdin = stdin_reset
+            else:
+                stdin_reset = sys.stdin
                 sys.stdin = io.StringIO(f"{dates[i][0]}\n{dates[i][1]}\n{dates[i][2]}")
                 test_date = Date()     
-                test_date.prompt_date()         
+                test_date.prompt_date()
+                sys.stdin = stdin_reset
                 self.assertEqual(expected[i][0], test_date.day, msg[i])
                 self.assertEqual(expected[i][1], test_date.month, msg[i])
                 self.assertEqual(expected[i][2], test_date.year, msg[i])
 
     def test_format_month(self):
+        stdin_reset = sys.stdin
         sys.stdin = io.StringIO("1\n4\n2006")
         test_date = Date()
         test_date.prompt_date()
+        sys.stdin = stdin_reset
 
         month = [
             "January", "February", "March", "April", "May", "June",

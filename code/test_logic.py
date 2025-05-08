@@ -18,12 +18,18 @@ class TestLogic(unittest.TestCase):
                "Case: Lucky number of birthday1 != equal to lucky number of birthday 2"]
         
         for i in range(len(expected)):
+            stdin_reset = sys.stdin
+
             date1 = Date()
             sys.stdin = io.StringIO(f"{birthday1[i][0]}\n{birthday1[i][1]}\n{birthday1[i][2]}")
             date1.prompt_date()
+            sys.stdin = stdin_reset
+
             date2 = Date()
             sys.stdin = io.StringIO(f"{birthday2[i][0]}\n{birthday2[i][1]}\n{birthday2[i][2]}")
             date2.prompt_date()
+            sys.stdin = stdin_reset
+            
             result = logic.same_luck(date1, date2)
             self.assertEqual(expected[i], result, msg[i])
 
