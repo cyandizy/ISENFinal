@@ -76,7 +76,7 @@ Prompts for user input for day, month, and year, validifies if they are in corre
 
 ```
 Method format_month
-Imports: None
+Imports: month (string)
 Exports: month (integer)
 
 Formats month to integer by using a dictionary that maps month strings to integers and return the integer. 
@@ -161,7 +161,7 @@ Each module is designed with modularity in mind from the beginning to avoid too 
 | 5   | 1995 <= year <= 2009 | = 2000        | "Generation Z"                |
 | 6   | 2010 <= year <= 2024 | = 2020        | "Generation Alpha"            |
 ##### Boundary Value Analysis
-| No. | Category                         | Input<br>                  | Expected Output<br>generation         |
+| No. | Category                         | Input<br>year              | Expected Output<br>generation         |
 | --- | -------------------------------- | -------------------------- | ------------------------------------- |
 | 1   | Silent Generation / Baby Boomers | year = 1945<br>year = 1946 | "Silent Generation"<br>"Baby Boomers" |
 | 2   | Baby Boomers / Generation X      | year = 1964<br>year = 1965 | "Baby Boomers"<br>"Generation X"      |
@@ -172,10 +172,10 @@ Each module is designed with modularity in mind from the beginning to avoid too 
 ### Module logic
 #### Submodule same_luck
 ##### Equivalence Partitioning
-| No. | Category<br>                                                                 | Input<br>                                        | Expected Output<br>result |
-| --- | ---------------------------------------------------------------------------- | ------------------------------------------------ | ------------------------- |
-| 1   | Lucky number of birthday1 <br>is equal to <br>lucky number of birthday 2     | birthday1 = 9, 7, 2005<br>birthday2 = 8, 8, 2005 | True                      |
-| 2   | Lucky number of birthday1 <br>is NOT equal to <br>lucky number of birthday 2 | birthday1 = 9, 7, 2005<br>birthday2 = 8, 9, 2005 | False                     |
+| No. | Category<br>                                                                 | Input<br>birthday1, birthday2                                | Expected Output<br>result |
+| --- | ---------------------------------------------------------------------------- | ------------------------------------------------------------ | ------------------------- |
+| 1   | Lucky number of birthday1 <br>is equal to <br>lucky number of birthday 2     | birthday1 = Date(9, 7, 2005)<br>birthday2 = Date(8, 8, 2005) | True                      |
+| 2   | Lucky number of birthday1 <br>is NOT equal to <br>lucky number of birthday 2 | birthday1 = Date(9, 7, 2005)<br>birthday2 = Date(8, 9, 2005) | False                     |
 
 #### Submodule is_master_number
 ##### Equivalence Partitioning
@@ -192,17 +192,17 @@ Each module is designed with modularity in mind from the beginning to avoid too 
 #### Class Date
 #### Method prompt_date
 ##### Equivalence Partitioning
-| No. | Category<br>                                                           | Input<br>                                  | Expected Output<br>result |
-| --- | ---------------------------------------------------------------------- | ------------------------------------------ | ------------------------- |
-| 1   | Day = 1-31, <br>Month = 1-12, <br>Year = 1901-2024 <br>(all inclusive) | day = 10<br>month = 3 <br>year = 2006      | (10, 3, 2006)             |
-| 2   | String month                                                           | day = 10<br>month = "March"<br>year = 2006 | (10, 3, 2006)             |
-| 3   | Invalid day                                                            | day = 0<br>month = 2<br>year = 2001        | ValueError                |
-| 4   | Invalid month                                                          | day = 10<br>month = 0<br>year = 1999       | ValueError                |
-| 5   | Invalid year                                                           | day = 20<br>month = 4<br>year = 9999       | ValueError                |
-| 6   | Invalid day and month                                                  | day = -1<br>month = 0<br>year = 2024       | ValueError                |
-| 7   | Invalid month and year                                                 | day = 4<br>month = 99<br>year = 2193       | ValueError                |
-| 8   | Invalid day and year                                                   | day = 111<br>month = 12<br>year = 9        | ValueError                |
-| 9   | Invalid day, month, and year                                           | day = 99<br>month = 99<br>year = 9999      | ValueError                |
+| No. | Category<br>                                                           | Input                                      | Expected Output<br>result             |
+| --- | ---------------------------------------------------------------------- | ------------------------------------------ | ------------------------------------- |
+| 1   | Day = 1-31, <br>Month = 1-12, <br>Year = 1901-2024 <br>(all inclusive) | day = 10<br>month = 3 <br>year = 2006      | day = 10<br>month = 3 <br>year = 2006 |
+| 2   | String month                                                           | day = 10<br>month = "March"<br>year = 2006 | day = 10<br>month = 3<br>year = 2006  |
+| 3   | Invalid day                                                            | day = 0<br>month = 2<br>year = 2001        | ValueError                            |
+| 4   | Invalid month                                                          | day = 10<br>month = 0<br>year = 1999       | ValueError                            |
+| 5   | Invalid year                                                           | day = 20<br>month = 4<br>year = 9999       | ValueError                            |
+| 6   | Invalid day and month                                                  | day = -1<br>month = 0<br>year = 2024       | ValueError                            |
+| 7   | Invalid month and year                                                 | day = 4<br>month = 99<br>year = 2193       | ValueError                            |
+| 8   | Invalid day and year                                                   | day = 111<br>month = 12<br>year = 9        | ValueError                            |
+| 9   | Invalid day, month, and year                                           | day = 99<br>month = 99<br>year = 9999      | ValueError                            |
 
 #### Method format_month
 ##### Equivalence Partitioning
@@ -246,15 +246,15 @@ Each module is designed with modularity in mind from the beginning to avoid too 
 
 ### Module date
 #### Method prompt_date
-| No. | Path<br>                                       | Test Data                                   | Expected Output |
-| --- | ---------------------------------------------- | ------------------------------------------- | --------------- |
-| 1   | Enter first if, do not enter second if         | day = 10<br>month = "march" <br>year = 2006 | (10, 3, 2006)   |
-| 2   | Enter first if, enter second if                | day = 44<br>month = "april"<br>year = 2006  | ValueError      |
-| 3   | Enter 1st if, enter 2nd else of 2nd if         | day = 14<br>month = "may"<br>year = 200     | ValueError      |
-| 4   | Enter else of 1st if, do not enter second if   | day = 12<br>month = 9<br>year = 2004        | (12, 9, 2004)   |
-| 5   | Enter else of 1st if, enter 2nd if             | day = -1<br>month = 4<br>year = 2024        | ValueError      |
-| 6   | Enter else of 1st if, enter 1st else of 2nd if | day = 4<br>month = 99<br>year = 1945        | ValueError      |
-| 7   | Enter else of 1st if, enter 2nd else of 2nd if | day = 9<br>month = 12<br>year = 2174        | ValueError      |
+| No. | Path<br>                                       | Test Data                                   | Expected Output                      |
+| --- | ---------------------------------------------- | ------------------------------------------- | ------------------------------------ |
+| 1   | Enter first if, do not enter second if         | day = 10<br>month = "march" <br>year = 2006 | day = 10<br>month = 3<br>year = 2006 |
+| 2   | Enter first if, enter second if                | day = 44<br>month = "april"<br>year = 2006  | ValueError                           |
+| 3   | Enter 1st if, enter 2nd else of 2nd if         | day = 14<br>month = "may"<br>year = 200     | ValueError                           |
+| 4   | Enter else of 1st if, do not enter second if   | day = 12<br>month = 9<br>year = 2004        | day = 12<br>month = 9<br>year = 2004 |
+| 5   | Enter else of 1st if, enter 2nd if             | day = -1<br>month = 4<br>year = 2024        | ValueError                           |
+| 6   | Enter else of 1st if, enter 1st else of 2nd if | day = 4<br>month = 99<br>year = 1945        | ValueError                           |
+| 7   | Enter else of 1st if, enter 2nd else of 2nd if | day = 9<br>month = 12<br>year = 2174        | ValueError                           |
 
 
 # Test implementation and test execution
@@ -284,7 +284,7 @@ The debug processes can be seen in the Version Control section.
 | get_generation         | Done    | Done     | -    | integer -> string     | Input: <br>Parameter<br>Output:<br>Return                   | Done | Done | -    |
 | same_luck              | Done    | -        | -    | Date -> boolean       | Input: <br>Parameter<br>Output:<br>Return                   | Done | -    | -    |
 | is_master_number       | Done    | -        | -    | integer -> boolean    | Input: <br>Parameter<br>Output:<br>Return                   | Done | -    | -    |
-| prompt_date            | Done    | -        | Done | string<br>-> Date     | Input: <br>Keyboard<br>Output:<br>Class member modification | Done | -    | Done |
+| prompt_date            | Done    | -        | Done | string<br>-> integer  | Input: <br>Keyboard<br>Output:<br>Class member modification | Done | -    | Done |
 | format_month           | Done    | -        | -    | string <br>-> integer | Input: <br>Parameter<br>Output:<br>Return                   | Done | -    | -    |
 # Version control
 
