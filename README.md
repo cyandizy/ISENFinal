@@ -103,9 +103,9 @@ The code can be run by running `python3 main.py`. The user interface will appear
 If your scenario selection input is invalid, it will prompt until you enter a correct input.
 You need to rerun the code if you would like to try another scenario. 
 
-![desc](code_running_instructions_1.png)
-![desc](code_running_instructions_2.png)
-![desc](code_running_instructions_3.png)
+![desc](documents/code_running_instructions_1.png)
+![desc](documents/code_running_instructions_2.png)
+![desc](documents/code_running_instructions_3.png)
 ### Modularity Checklist
 | No. | Question                        | Yes/No | Where |
 | --- | ------------------------------- | ------ | ----- |
@@ -271,7 +271,7 @@ python3 -m unittest
 Note that this command needs to be executed inside `code/` directory
 
 The result is that all test cases passed as expected.
-![desc](unittest_passed.png)
+![desc](documents/unittest_passed.png)
 The debug processes can be seen in the Version Control section.
 
 # Traceability Matrix
@@ -290,7 +290,7 @@ The debug processes can be seen in the Version Control section.
 
 As my version control log is very long. I believe it is impractical to take a screenshot. 
 
-![desc](git_commit_count.png)
+![desc](documents/git_commit_count.png)
 
 So, I used this command instead.
 
