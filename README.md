@@ -2,7 +2,6 @@
 
 
 ### Assignment
-#### By Komes Pispol 90035701
 #### Class Tuesday, 9:00 AM
 
 
